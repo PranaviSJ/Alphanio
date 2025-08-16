@@ -192,13 +192,14 @@
     text-align: center;
   }
 
-  .llm-bullets {
-    font-size: 2.8vh;
+ .llm-bullets {
+    font-size: 2.4vh;
     padding-left: 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
+    margin-left: 0;
+    transform: translateX(23%);
+    text-align: left;
+    white-space: nowrap; /* keep each line on one row */
+}
 
   .llm-image {
     position: static;
