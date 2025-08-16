@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+/* Extra bold weight */
+
+.agent-ai-wrapper {
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: linear-gradient(to top, #ffffff 0%, #c6dafd 50%, #e6b0e7 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row layout on desktop */
+.agent-ai-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* allow wrapping */
+}
+
+/* Text group */
+.agent-ai-text-group {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Heading */
+.agent-ai-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 0;
+}
+
+
+.make-gradient {
+  background: linear-gradient(90deg,
+      #000000 0%,
+      #5d0089 20%,
+      #005859 64%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  font-weight: 800;
+}
+
+.agent-ai-description {
+  font-family: 'Inter', sans-serif;
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #202020;
+  line-height: 1.6;
+  text-align: left;
+  margin-left: 10%;
+  max-width: 100%;
+}
+
+.agent-ai-image-container {
+  flex: 1;
+  position: relative;
+  height: 64vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.agent-ai-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 100%;
+  margin-right: 10%;
+}
+
+/* Button Group Wrapper */
+.agent-ai-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-left: 10%;
+  flex-wrap: wrap;
+  /* buttons wrap on small screens */
+}
+
+
+/* Primary button — white bg, black text, semi-bold, rounded rectangle */
+.agent-ai-btn-primary {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  background: #fff;
+  color: #000;
+  padding: 0.85rem 1.8rem;
+  border-radius: 0.625vw;
+  /* rounded rectangle */
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.agent-ai-btn-primary:hover {
+  background: #f5f5f5;
+}
+
+/* Secondary button — transparent bg, black text, gradient border */
+.agent-ai-btn-secondary {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #000;
+  padding: 0.83rem 1.75rem;
+  background: transparent;
+  /* fully transparent inside */
+
+  border-radius: 0.625vw;
+  /* responsive curved rectangle */
+  background: linear-gradient(#d5e1f5, #d5e1f5) padding-box,
+    /* inside is white/transparent */
+    linear-gradient(135deg, #6A57C9, #51C5F2) border-box;
+  /* border gradient */
+  border: 0.110vw solid transparent;
+  /* must be transparent to show gradient */
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.agent-ai-btn-secondary:hover {
+  filter: brightness(1.1);
+}
+
+
+/* ========== MOBILE STYLES ========== */
+@media (max-width: 768px) {
+  .agent-ai-content {
+    flex-direction: column-reverse;
+    /* stack image below text */
+    text-align: center;
+  }
+
+  .agent-ai-heading {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .agent-ai-description {
+    font-size: 0.95rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .agent-ai-buttons {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .agent-ai-image-container {
+    height: auto;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .agent-ai-image {
+    position: static;
+    /* remove absolute positioning */
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .agent-ai-heading {
+    font-size: 1.6rem;
+  }
+
+  .agent-ai-description {
+    font-size: 0.9rem;
+  }
+
+  .agent-ai-btn-primary,
+  .agent-ai-btn-secondary {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+}

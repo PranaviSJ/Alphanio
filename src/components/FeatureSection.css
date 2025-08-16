@@ -1,0 +1,149 @@
+.feature-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vh;
+  margin: 3vh 2%;
+  box-sizing: border-box;
+}
+
+/* Reusable image style */
+.feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 3vh;
+}
+
+.img-1,
+.img-2,
+.img-3 {
+  border-radius: 3vh;
+  overflow: hidden;
+  height: 30vh;
+  position: relative;
+  flex: 1 1 30%;
+  min-width: 260px;
+}
+
+.img-2 {
+  text-align: left;
+}
+
+/* === IMG 1 === */
+.img-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F4F6;
+}
+
+.img-1-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1vh;
+  color: #353131;
+}
+
+.img-1 img {
+  width: 9vh;
+  height: 9vh;
+  margin-bottom: 2vh;
+  object-fit: contain;
+}
+
+.img-1-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* === IMG 2 === */
+.img-2 img {
+  border-radius: 3vh;
+}
+
+.feature-overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: rgb(66, 64, 64);
+}
+
+.feature-number {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.feature-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+  max-width: 90%;
+  white-space: normal;
+}
+
+/* === IMG 3 === */
+.img-3 {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vh;
+  box-sizing: border-box;
+}
+
+.img-3-left-text {
+  display: flex;
+  flex-direction: column;
+  color: #4b4747;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.img-3-line {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.img-3-play-icon {
+  height: 8vh;
+  width: 8vh;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .feature-section {
+    padding: 0 3vw;
+  }
+
+  .feature-number {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .img-3 {
+    height: auto;
+    padding-left: 2vw;
+  }
+
+  .img-3-play-icon {
+    height: 6vh;
+    width: 6vh;
+    padding-left: 2vw;
+  }
+}

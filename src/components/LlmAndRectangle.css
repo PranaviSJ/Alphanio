@@ -1,0 +1,265 @@
+/* LlmSection.css + Rectangle.css merged */
+
+.llm-section {
+  text-align: center;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+  /* allow wrapping for smaller screens */
+}
+
+.llm-heading {
+  text-align: left;
+  font-size: 3vw;
+  width: 80%;
+  font-weight: bold;
+  color: black;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg,
+      #b23baf 0%,
+      #ff8080 10%,
+      #6508f0 28%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.llm-bullets {
+  list-style-type: disc;
+  padding-left: 20.5vw;
+  font-family: "Instrument Sans", sans-serif;
+  font-style: italic;
+  font-size: 4vh;
+  text-align: left;
+  margin-top: 1.5vh;
+  line-height: 1.9;
+  margin-left: -31%;
+  color: rgba(0, 0, 0, 0.66);
+}
+
+.llm-image-container {
+  flex-shrink: 0;
+}
+
+.llm-image {
+  object-fit: contain;
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  width: 50%;
+  height: auto;
+}
+
+.rectangle-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  position: relative;
+  margin-top: 5%;
+  flex-wrap: wrap;
+  /* allows stacking on small screens */
+}
+
+.rectangle-with-text {
+  position: relative;
+  flex: 1 1 45%;
+  /* grow & shrink, 2 per row on desktop */
+  max-width: 500px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.rectangle-with-text:hover {
+  transform: translateY(-5px);
+  /* button-like hover effect */
+}
+
+.rectangle-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Overlay */
+.text-overlay,
+.text-overlay.right-text-overlay {
+  position: absolute;
+  color: #545454;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 600;
+  top: 15%;
+  left: 12%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.llm-text,
+.right-rectangle-text-main {
+  font-size: 1.1rem;
+}
+
+
+.learn-more-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.learn-more-text {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+  font-size: 1rem;
+}
+
+.external-link-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rectangle-with-text.right-rectangle-text {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-overlay.right-text-overlay {
+  position: absolute;
+  color: #545454;
+  font-family: "Instrument Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  top: 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.right-rectangle-text-main {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2rem;
+  white-space: pre-line;
+  color: #545454;
+}
+
+.right-explore-now {
+  font-weight: 600;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 1rem;
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 0.2rem;
+}
+
+.llm-rectangle-wrapper {
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  background: linear-gradient(to bottom,
+      #ffffff 0%,
+      #c6dafd 50%,
+      #e6b0e7 100%);
+}
+
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .llm-section {
+    flex-direction: column;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .llm-heading {
+    font-size: 6vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  .llm-bullets {
+    font-size: 2.8vh;
+    padding-left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .llm-image {
+    position: static;
+    width: 80%;
+    margin: 1rem auto 0;
+  }
+
+  .rectangle-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rectangle-with-text {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+
+  .text-overlay,
+  .text-overlay.right-text-overlay {
+    left: 10%;
+    top: 12%;
+    font-size: 1rem;
+  }
+
+  .llm-text,
+  .right-rectangle-text-main {
+    font-size: 1.5rem;
+  }
+
+  .learn-more-text,
+  .right-explore-now {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .llm-heading {
+    font-size: 7vw;
+  }
+
+  .llm-bullets {
+    font-size: 2.2vh;
+  }
+
+  .llm-image {
+    width: 100%;
+  }
+
+  .rectangle-img {
+    width: 100%;
+  }
+
+  .text-overlay,
+  .text-overlay.right-text-overlay {
+    left: 15%;
+    top: 12%;
+    font-size: 0.8rem;
+  }
+
+  .llm-text,
+  .right-rectangle-text-main {
+    font-size: 0.9rem;
+  }
+}

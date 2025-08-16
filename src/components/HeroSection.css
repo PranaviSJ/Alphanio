@@ -1,0 +1,140 @@
+.hero-section {
+  background-image: url('../assets/hero-img-top.png');
+  background-size: cover;
+  /* cover so image scales nicely */
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-top: 70vh;
+  /* space for hero height */
+  position: relative;
+  border-radius: 2vh !important;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  /* entrance animation */
+  opacity: 0;
+  transform: translateY(2vh);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+/* delay for hero-text-block so it comes in slightly later */
+.hero-text-block {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 80%;
+  text-align: left;
+
+  opacity: 0;
+  transform: translateY(2vh);
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.12s;
+}
+
+.mini-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5vh;
+  font-weight: 400;
+  color: #AAAAAA;
+  margin-bottom: -2vh;
+}
+
+.main-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 6vh;
+  font-weight: 700;
+  color: black;
+  line-height: 1.2;
+  margin-bottom: -0.5vh;
+}
+
+.sub-heading {
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vh;
+  color: #555;
+  font-weight: 300;
+  margin-top: 1vh;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 3vh;
+  margin-top: 4vh;
+  margin-left: 0;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9vh;
+  padding: 1vh 2vh;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.black {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.btn.transparent {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+/* fade-up animation keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 7%;
+  }
+
+  .hero-text-block {
+    top: 8%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+  }
+
+  .mini-heading {
+    font-size: 2vh;
+  }
+
+  .main-heading {
+    line-height: 1.25;
+  }
+
+  .sub-heading {
+    width: 100%;
+    font-size: 1.6vh;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+  }
+
+  .btn {
+    width: 70%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    margin-top: 15%;
+  }
+}

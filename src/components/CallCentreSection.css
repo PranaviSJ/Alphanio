@@ -1,0 +1,157 @@
+/* ===================== Base Section ===================== */
+.call-centre-section {
+  margin: 10vh auto;
+  padding: 5vh 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 12vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===================== Top Section ===================== */
+.call-centre-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.customer-top {
+  flex: 1 1 45%;
+  max-width: 50%;
+  height: auto;
+}
+
+.customer-text {
+  flex: 1 1 45%;
+}
+
+.customer-text-bold {
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.customer-text-light {
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  color: #666;
+}
+
+.learn-more-btn {
+  margin-top: 2rem;
+  background: black;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #222;
+}
+
+/* ===================== Bottom Section ===================== */
+.call-centre-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5%;
+  flex-wrap: nowrap;
+}
+
+.customer-down {
+  flex: 1 1 40%;
+  max-width: 500px;
+  height: auto;
+}
+
+.customer-down-text {
+  flex: 1 1 50%;
+  font-weight: 900;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.highlight-green {
+  color: #00B667;
+}
+
+.customer-down-subtext {
+  flex: 1 1 50%;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: #635959;
+  line-height: 1.6;
+}
+
+/* Force manual line breaks to behave */
+.manual-breaks {
+  font-style: normal;
+  white-space: normal;
+}
+
+/* ===================== Responsive ===================== */
+
+/* tablet down adjustments to avoid jumpiness */
+@media (max-width: 1024px) {
+#call-centre .call-centre-bottom {
+gap: 3% !important;
+}
+}
+
+/* main mobile layout */
+@media (max-width: 900px) {
+.call-centre-bottom.call-centre-bottom {
+display: grid !important;
+grid-template-columns: 1fr auto !important;
+grid-template-rows: auto auto !important;
+column-gap: 16px !important;
+row-gap: 12px !important;
+align-items: stretch !important;
+}
+
+.call-centre-bottom .customer-down.customer-down {
+grid-column: 1 !important;
+grid-row: 1 !important;
+width: 100% !important;
+height: auto !important;
+max-width: 100% !important;
+justify-self: start !important;
+align-self: start !important;
+}
+
+.call-centre-bottom .customer-down-text.customer-down-text {
+grid-column: 2 !important;
+grid-row: 1 !important;
+margin: 0 !important;
+text-align: left !important;
+line-height: 1.05 !important;
+font-size: clamp(1.4rem, 5.5vw, 2rem) !important;
+display: flex !important;
+flex-direction: column !important;
+justify-content: flex-start !important;
+align-items: flex-start !important;
+}
+
+.call-centre-bottom .customer-down-subtext,
+.call-centre-bottom .customer-down-text .customer-down-subtext {
+grid-column: 1 / -1 !important;
+grid-row: 2 !important;
+margin: 0 !important;
+text-align: left !important;
+}
+
+.call-centre-bottom,
+.call-centre-bottom * {
+text-align: initial !important;
+align-items: initial !important;
+justify-content: initial !important;
+}
+}

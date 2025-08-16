@@ -1,0 +1,149 @@
+.partner-section {
+  width: 100%;
+  padding: 1rem 2%;
+  box-sizing: border-box;
+}
+
+/* Two columns: left (text + TrustedBy), right (partner image) */
+.partner-wrap {
+  display: flex;
+  justify-content: space-between;
+  /* controls horizontal gap between columns */
+  align-items: flex-start;
+  /* aligns columns vertically */
+  width: 100%;
+  gap: 2%;
+}
+
+/* ===== POSITION CONTROLS (EDIT HERE) ===== */
+
+/* 1) LEFT COLUMN POSITION: text + TrustedBy image */
+.partner-left {
+  margin-top: 7%;
+  display: block;
+  /* fixed behavior, no flex shrink/grow */
+  flex: 0 0 40%;
+  /* width of the left column */
+  margin-left: 10%;
+}
+
+/* 2) RIGHT IMAGE POSITION: partner image */
+.partner-img {
+  max-width: 40vw;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  flex: 0 0 auto;
+  /* don’t let it resize column widths */
+
+  /* Horizontal/vertical nudges (edit as needed) */
+  margin-right: 5%;
+  /* move left by reducing, right by increasing */
+  margin-top: -1%;
+  /* move down; use negative to move up */
+
+  /* If you want absolute right edge without extra margin, set:
+     margin-right: 0%;
+  */
+}
+
+/* ===== TEXT STYLES (locked look) ===== */
+.partner-text {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 700;
+  color: #160637;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  white-space: pre-line;
+  /* preserves <br /> */
+  word-break: keep-all;
+  overflow-wrap: normal;
+  margin-left: -16%;
+  margin-top: 7%;
+  /* indent the text block inside left column */
+  margin-bottom: 13%;
+}
+
+/* TrustedBy image directly beneath the text (aligned with text indent) */
+.trustedby-img {
+  display: block;
+  height: auto;
+  max-width: 33vw;
+  margin-top: -8%;
+  object-fit: contain;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 0.1%;
+  height: 0.1%;
+  padding: 0;
+  margin: -0.1%;
+  overflow: hidden;
+  clip: rect(0% 0% 0% 0%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.companies-img {
+  width: 75%;
+  /* same width as trustedby for balance */
+  max-width: 100%;
+  height: auto;
+  margin-top: 5vh;
+  margin-left: -16%;
+  /* space between the two images */
+  transition: transform 0.4s ease;
+}
+
+
+.companies-img:hover {
+  transform: translateY(-1.5vh) scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .partner-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .partner-left {
+    margin-top: 0;
+    margin-left: 0;
+    text-align: center;
+    flex: 0 0 auto;
+    /* margin-left: 0;  uncomment to reset indent on mobile */
+  }
+
+  .partner-text {
+    margin-left: 0;
+  }
+
+  .trustedby-img {
+    max-width: 90vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .partner-right {
+    width: 100%;
+    margin-left: 50%;
+  }
+
+  .partner-img {
+    transform: translateX(-50%);
+    max-width: 80vw;
+    margin-right: 0;
+    margin-top: 1rem;
+    align-self: flex-end;
+    /* keep it to the right when possible */
+    margin-bottom: 0;
+  }
+
+  .companies-img {
+    margin-left: 0;
+  }
+}
