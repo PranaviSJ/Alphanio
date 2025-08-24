@@ -134,60 +134,67 @@
 }
 
 
-/* ========== MOBILE STYLES ========== */
-@media (max-width: 768px) {
+
+/* ===== HERO SECTION: Prevent Text-Image Overlap ===== */
+
+/* On screen widths below 1300px, stack or reflow content so images and text don't touch */
+
+@media (max-width: 1300px) {
   .agent-ai-content {
-    flex-direction: column-reverse;
-    /* stack image below text */
-    text-align: center;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: flex-start;
   }
-
-  .agent-ai-heading {
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-left: 0;
-    text-align: center;
+  .agent-ai-text-group {
+    max-width: 95vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
   }
-
-  .agent-ai-description {
-    font-size: 0.95rem;
-    margin-left: 0;
-    text-align: center;
+  .agent-ai-heading, .agent-ai-description {
+    text-align: center !important;
+    margin-left: 0 !important;
   }
-
-  .agent-ai-buttons {
-    justify-content: center;
-    margin-left: 0;
-  }
-
   .agent-ai-image-container {
-    height: auto;
-    margin-top: 2rem;
-    justify-content: center;
+    width: 100vw !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 2vh !important;
+    margin-top: 2vh !important;
   }
-
   .agent-ai-image {
-    position: static;
-    /* remove absolute positioning */
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
+    width: 70vw !important;
+    max-width: 400px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    position: static !important;
+    z-index: 1 !important;
+  }
+}
+
+/* For devices below 850px (mobiles/tablets): make everything 100% width, stack vertically */
+@media (max-width: 850px) {
+  .agent-ai-text-group,
+  .agent-ai-image-container,
+  .agent-ai-image {
+    max-width: 99vw !important;
+    width: 99vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .agent-ai-image {
+    max-width: 85vw !important;
+    width: 85vw !important;
   }
 }
 
 @media (max-width: 480px) {
-  .agent-ai-heading {
-    font-size: 1.6rem;
-  }
-
-  .agent-ai-description {
-    font-size: 0.9rem;
-  }
-
-  .agent-ai-btn-primary,
-  .agent-ai-btn-secondary {
-    width: 100%;
-    padding: 0.9rem;
-    font-size: 0.95rem;
+  .agent-ai-image {
+    max-width: 98vw !important;
+    width: 98vw !important;
   }
 }
+
+
