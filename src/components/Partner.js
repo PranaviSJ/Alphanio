@@ -6,7 +6,7 @@ import companies from "../assets/companies.png";
 
 function Partner() {
   return (
-    <section className="partner-section" aria-labelledby="partner-heading">
+    <section id = "partners" className="partner-section" aria-labelledby="partner-heading">
       <h2 id="partner-heading" className="sr-only">Our Partners</h2>
 
       <div className="partner-wrap">

@@ -4,7 +4,7 @@ import agentImage from "../assets/Agent.png"; // adjust path as needed
 
 const AgentAi = () => {
   return (
-    <section className="agent-ai-wrapper">
+    <section id ="Agentic AI" className="agent-ai-wrapper">
       <div className="agent-ai-content">
         <div className="agent-ai-text-group">
           <h1 className="agent-ai-heading">

@@ -8,6 +8,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [animating, setAnimating] = useState(""); // "" | "slide-up"
 
+// eslint-disable-next-line no-unused-vars
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   useEffect(() => {
@@ -55,8 +56,8 @@ const Navbar = () => {
 
       <ul className={`navbar-right ${menuOpen ? "active" : ""}`}>
         <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-        <li><a href="#product" onClick={() => setMenuOpen(false)}>Products</a></li>
-        <li><a href="#solution" onClick={() => setMenuOpen(false)}>Solutions</a></li>
+        <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
+        <li><a href="#products" onClick={() => setMenuOpen(false)}>Products</a></li>
         <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
       </ul>
     </nav>

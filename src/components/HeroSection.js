@@ -3,7 +3,7 @@ import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
+    <section id="about" className="hero-section">
       <div className="hero-text-block">
         <p className="mini-heading">Think Smarter. Think AI.</p>
 
@@ -14,9 +14,11 @@ const HeroSection = () => {
         </h1>
 
         <div className="sub-heading">
-          <p>We specialize in building AI-powered solutions that enhance productivity
-          and decision-making. At Alphanio Nexgen, we're shaping the future with
-          smart, adaptive technologies.</p>
+          <p>
+            We specialize in building AI-powered solutions that enhance productivity
+            and decision-making. At Alphanio Nexgen, we're shaping the future with
+            smart, adaptive technologies.
+          </p>
         </div>
 
         <div className="hero-buttons">

@@ -1,6 +1,7 @@
 import React from "react";
 import "./FeatureSection.css";
 
+// eslint-disable-next-line no-unused-vars
 import heroImg1 from "../assets/hero-img-1.png";
 import heroImg2 from "../assets/hero-img-2.png";
 import heroImg3 from "../assets/hero-img-3.png";
@@ -9,7 +10,7 @@ import playIcon from "../assets/Play.png";
 
 const FeatureSection = () => {
   return (
-    <section className="feature-section">
+    <section id = "media"className="feature-section">
       {/* Card 1 - Smarter Workflow */}
       <div
         className="feature-box img-1"

@@ -60,7 +60,7 @@ export const Rectangle = () => {
 
 export const LlmAndRectangleWrapper = () => {
   return (
-    <div className="llm-rectangle-wrapper">
+    <div id = "products" className="llm-rectangle-wrapper">
       <LlmSection />
       <Rectangle />
     </div>

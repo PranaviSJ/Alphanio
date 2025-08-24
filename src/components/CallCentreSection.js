@@ -5,7 +5,7 @@ import CustomerDown from "../assets/Customer-down.png"; // lowercase d in 'down'
 
 const CallCentreSection = () => {
   return (
-    <section id="call-centre" className="call-centre-section">
+    <section id="services" className="call-centre-section">
       <div className="call-centre-top">
 
         <div className="customer-text">
@@ -24,25 +24,24 @@ const CallCentreSection = () => {
       <div className="call-centre-bottom">
         <img src={CustomerDown} alt="Customer Service Bottom" className="customer-down" />
 
-    <div className="side-text-wrapper">
-        <div className="customer-down-text">
-          <p>The complete <span className="highlight-green">customer</span> service solution</p>
-        </div>
-        <div className="customer-down-subtext">
-          <p className="manual-breaks">
-            Bring together customer conversations from every possible channel, including
-            phone,email, chat, social media, and many others, ensuring that your agents
-            always have complete context and a clear understanding before they respond.
-            With Alphanio Nexgen, your team can effortlessly access detailed, real-time
-            dashboards and well-organized data, making it easy to monitor service quality,
-            track performance, identify improvement opportunities, and take timely action.
-            From the very first day, you can begin resolving requests automatically, reducing
-            manual work, increasing efficiency, and delivering faster, more accurate responses that keep customers satisfied.
-          </p>
-        </div>
+        <div className="side-text-wrapper">
+          <div className="customer-down-text">
+            <p>The complete <span className="highlight-green">customer</span> service solution</p>
+          </div>
+          <div className="customer-down-subtext">
+            <p className="manual-breaks">
+              Bring together customer conversations from every possible channel, including
+              phone,email, chat, social media, and many others, ensuring that your agents
+              always have complete context and a clear understanding before they respond.
+              With Alphanio Nexgen, your team can effortlessly access detailed, real-time
+              dashboards and well-organized data, making it easy to monitor service quality,
+              track performance, identify improvement opportunities, and take timely action.
+              From the very first day, you can begin resolving requests automatically, reducing
+              manual work, increasing efficiency, and delivering faster, more accurate responses that keep customers satisfied.
+            </p>
+          </div>
         </div>
       </div>
-
 
     </section>
   );
