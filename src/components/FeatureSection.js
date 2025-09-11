@@ -6,16 +6,13 @@ import heroImg1 from "../assets/hero-img-1.png";
 import heroImg2 from "../assets/hero-img-2.png";
 import heroImg3 from "../assets/hero-img-3.png";
 import diagram1 from "../assets/diagram1.png";
-import playIcon from "../assets/Play.png";
+
 
 const FeatureSection = () => {
   return (
-    <section id = "media"className="feature-section">
+    <section id="media" className="feature-section">
       {/* Card 1 - Smarter Workflow */}
-      <div
-        className="feature-box img-1"
-
-      >
+      <div className="feature-box img-1">
         <div className="img-1-overlay">
           <img src={diagram1} alt="icon" className="img-1-icon" />
           <p className="img-1-title">Smarter Workflow Automation</p>
@@ -33,24 +30,17 @@ const FeatureSection = () => {
         </div>
       </div>
 
-      {/* Card 3 - Play Video */}
-      <div
-        className="feature-box img-3"
-        style={{ backgroundImage: `url(${heroImg3})` }}
-      >
-        <div className="img-3-left-text">
-          <p className="img-3-line">Discover what our AI</p>
-          <p className="img-3-line">can do</p>
+      {/* Card 3 - Customer Success / Impact */}
+      <div className="feature-box img-3">
+        <img src={heroImg3} alt="Feature 3" className="feature-img" />
+        <div className="feature-overlay">
+          <p className="feature-number">10K+</p>
+          <p className="feature-subtitle">
+            Conversations automated  with intelligent  AI
+          </p>
         </div>
-        <a
-          href="https://youtu.be/U6fC4Ij608A?si=m9c6SM4BHfTFjwTw"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={playIcon} alt="Play" className="img-3-play-icon" />
-        </a>
-
       </div>
+
     </section>
   );
 };

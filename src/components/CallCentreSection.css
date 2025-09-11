@@ -99,6 +99,51 @@
   white-space: normal;
 }
 
+.learn-more-btn {
+  display: inline-block;
+  padding: 2vh 4vh;   /* increased padding for bigger size */
+  font-size: 2.2vh;   /* larger text */
+  background: black;
+  color: white;
+  border-radius: 1.5vh; /* slightly rounder to match bigger size */
+  cursor: pointer;
+  position: relative;
+}
+
+
+.hover-preview {
+  position: absolute;
+  left: 0;
+  width: 30vh;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 1vh;
+  padding: 2vh;
+  box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(1vh);
+  animation: fadeIn 0.2s forwards;
+}
+
+.hover-preview.bottom {
+  top: 120%;
+  /* show below */
+}
+
+.hover-preview.top {
+  bottom: 120%;
+  /* show above */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===================== Responsive ===================== */
 
 /* tablet down adjustments to avoid jumpiness */

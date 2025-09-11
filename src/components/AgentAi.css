@@ -12,6 +12,7 @@
 
 /* Row layout on desktop */
 .agent-ai-content {
+   margin-top: -15vh;
   display: flex;
   align-items: center;
   justify-content: space-between;

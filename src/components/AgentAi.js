@@ -16,12 +16,6 @@ const AgentAi = () => {
             artificial intelligence that, together, make it capable of<br />
             planning, acting, learning, and improving.
           </p>
-
-          {/* Buttons */}
-          <div className="agent-ai-buttons">
-            <button className="agent-ai-btn-primary">Try it now →</button>
-            <button className="agent-ai-btn-secondary">Learn more</button>
-          </div>
         </div>
 
         <div className="agent-ai-image-container">

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -12,20 +13,32 @@ import Testimonial from './components/Testimonial';
 import Partner from './components/Partner'; 
 import Footer from './components/Footer';
 
+import ChatPage from './components/ChatPage';
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <HeroSection />
-      <FeatureSection />
-      <ClientsSection />
-      <CallCentreSection />
-      <LlmAndRectangleWrapper />
-      <AgentAi />
-      <Testimonial />
-      <Partner /> 
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        {/* Home Page */}
+        <Route path="/" element={
+          <div className="App">
+            <Navbar />
+            <HeroSection />
+            <FeatureSection />
+            <CallCentreSection />
+            <LlmAndRectangleWrapper />
+            <AgentAi />
+            <Testimonial />
+            <Partner /> 
+            <Footer />
+          </div>
+        } />
+
+        {/* Contact Page → Redirects to ChatPage */}
+        <Route path="/contact" element={<ChatPage />} />
+        <Route path="/chat" element={<ChatPage />} />
+      </Routes>
+    </Router>
   );
 }
 
