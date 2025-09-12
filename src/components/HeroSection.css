@@ -60,32 +60,7 @@
   margin-top: 1vh;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 3vh;
-  margin-top: 4vh;
-  margin-left: 0;
-}
 
-.btn {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.9vh;
-  padding: 1vh 2vh;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn.black {
-  background-color: black;
-  color: white;
-  border: none;
-}
-
-.btn.transparent {
-  background-color: transparent;
-  color: black;
-  border: 1px solid black;
-}
 
 /* fade-up animation keyframes */
 @keyframes fadeUp {

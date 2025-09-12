@@ -59,11 +59,12 @@
 }
 
 .img-1-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.4rem);
-  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.4;
+  max-width: 90%;
+  white-space: normal;
 }
 
 /* === IMG 2 === */
@@ -129,7 +130,6 @@
 }
 
 .feature-box.img-3 .feature-subtitle {
-  font-family: 'Poppins', sans-serif;
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 500;
   margin: 0;

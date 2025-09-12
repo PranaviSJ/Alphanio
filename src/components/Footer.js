@@ -23,13 +23,16 @@ const Footer = () => {
             <li><a href="#services" className="quicklink-item">Services</a></li>
             <li><a href="#products" className="quicklink-item">Products</a></li>
             <li>
-              <span 
-                onClick={() => navigate("/chat")} 
-                className="quicklink-item quicklink-clickable"
-              >
-                Contact Us
-              </span>
-            </li>
+  <a
+    href="https://www.google.com/maps/place/Alphanio+Nexgen/@12.9779248,77.6373175,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1724464f9b41:0x2087065a01ae572d!8m2!3d12.9779248!4d77.6398924!16s%2Fg%2F11q9m8yx8g?entry=ttu&g_ep=EgoyMDI1MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="quicklink-item"
+  >
+    Contact Us
+  </a>
+</li>
+
             <li><a href="#about" className="quicklink-item">Home</a></li>
           </ul>
         </div>
@@ -51,16 +54,7 @@ const Footer = () => {
           <ul className="quicklinks-list">
             <li><a href="#media" className="quicklink-item">Media center</a></li>
             <li><a href="#partners" className="quicklink-item">Our partners</a></li>
-            <li>
-              <a 
-                href="https://www.linkedin.com/company/alphanio-nexgen/posts/?feedView=all"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="quicklink-item"
-              >
-                LinkedIn
-              </a>
-            </li>
+          
           </ul>
         </div>
       </div>

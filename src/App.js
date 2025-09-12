@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import FeatureSection from './components/FeatureSection';
-import ClientsSection from './components/ClientsSection';
 import CallCentreSection from './components/CallCentreSection';
 import { LlmAndRectangleWrapper } from "./components/LlmAndRectangle";
 import AgentAi from './components/AgentAi';
@@ -14,6 +13,7 @@ import Partner from './components/Partner';
 import Footer from './components/Footer';
 
 import ChatPage from './components/ChatPage';
+import AssistantBot from './components/AssistantBot';  
 
 function App() {
   return (
@@ -31,6 +31,9 @@ function App() {
             <Testimonial />
             <Partner /> 
             <Footer />
+
+            {/* Floating Assistant Bot */}
+            <AssistantBot />  
           </div>
         } />
 

@@ -1,0 +1,81 @@
+/* Floating Bot Icon */
+.assistant-bot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.bot-icon {
+  background: linear-gradient(135deg, #A78BFA, #93C5FD); /* lavender → blue */
+  color: #fff;
+  font-size: 22px;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect: brighter gradient + scale */
+.bot-icon:hover {
+  background: linear-gradient(135deg, #C4B5FD, #60A5FA);
+  transform: scale(1.1);
+}
+
+
+
+/* Popup Chat Window (hidden by default) */
+.bot-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 400px;    /* wider */
+  height: 80%;     /* taller */
+  background: #fff;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.35);
+  border-radius: 16px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* Start hidden (slid down) */
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+
+  /* Smooth animation */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active state → slide up */
+.bot-popup.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Close button */
+.close-btn {
+  align-self: flex-end;
+  margin: 8px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Chat styles */
+df-messenger {
+  flex: 1;
+  --df-messenger-font-color: #000;
+  --df-messenger-font-family: Google Sans, sans-serif;
+  --df-messenger-chat-background: #f3f6fc;
+  --df-messenger-message-user-background: #d3e3fd;
+  --df-messenger-message-bot-background: #fff;
+  width: 100%;
+  height: 100%;
+}

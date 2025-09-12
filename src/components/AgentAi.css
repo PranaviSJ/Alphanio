@@ -138,64 +138,98 @@
 
 /* ===== HERO SECTION: Prevent Text-Image Overlap ===== */
 
-/* On screen widths below 1300px, stack or reflow content so images and text don't touch */
+/* === Responsive fixes only (desktop unchanged) === */
 
+/* 1300px and down: stack content, image on right, text justified */
 @media (max-width: 1300px) {
   .agent-ai-content {
     flex-direction: column-reverse !important;
     align-items: center !important;
     justify-content: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
+
   .agent-ai-text-group {
-    max-width: 95vw !important;
+    max-width: 42rem !important;
+    width: 100% !important;
+    text-align: left !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    text-align: center !important;
   }
-  .agent-ai-heading, .agent-ai-description {
-    text-align: center !important;
+
+  .agent-ai-heading {
+    text-align: left !important;
+    margin-left: 0 !important;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .agent-ai-description {
+    text-align: justify !important;      /* ✅ makes each line filled */
+    margin-left: 0 !important;
+    max-width: 36rem !important;
+    margin-inline: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    hyphens: auto !important;            /* ✅ cleaner breaks */
+    word-break: break-word !important;   /* ✅ ensures text fits */
+  }
+
+  .agent-ai-buttons {
+    justify-content: flex-start !important;
     margin-left: 0 !important;
   }
+
   .agent-ai-image-container {
-    width: 100vw !important;
+    width: 100% !important;
     height: auto !important;
     display: flex !important;
-    justify-content: center !important;
-    margin-bottom: 2vh !important;
-    margin-top: 2vh !important;
+    justify-content: flex-end !important;   /* ✅ move image to right */
+    margin: 2vh auto !important;
+    padding-right: 5%;                      /* ✅ small spacing from edge */
   }
+
   .agent-ai-image {
-    width: 70vw !important;
-    max-width: 400px !important;
+    width: min(70vw, 400px) !important;
     height: auto !important;
-    margin: 0 auto !important;
+    margin: 0 0 0 auto !important;          /* ✅ image hugs right */
     display: block !important;
     position: static !important;
-    z-index: 1 !important;
   }
 }
 
-/* For devices below 850px (mobiles/tablets): make everything 100% width, stack vertically */
-@media (max-width: 850px) {
-  .agent-ai-text-group,
-  .agent-ai-image-container,
-  .agent-ai-image {
-    max-width: 99vw !important;
-    width: 99vw !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+  .image-container {
+    display: flex;
+    justify-content: flex-end;  /* push images to right side */
+    margin: 0;
+    width: 100%;
   }
-  .agent-ai-image {
-    max-width: 85vw !important;
-    width: 85vw !important;
+
+  .text-block {
+    width: 100%;
+    padding: 0 16px;            /* nice breathing room */
+    text-align: left;           /* keep aligned left */
+    line-height: 1.6;
+    word-break: break-word;
+    white-space: normal;        /* ensures text fills the line naturally */
+  }
+
+  .text-block p {
+    text-align: justify;        /* makes lines fill width evenly */
   }
 }
 
+
+/* Small phones: keep image responsive on right */
 @media (max-width: 480px) {
   .agent-ai-image {
-    max-width: 98vw !important;
-    width: 98vw !important;
+    width: 90vw !important;
+    max-width: 90vw !important;
+    margin: 0 0 0 auto !important;          /* ✅ still right aligned */
   }
 }
-
-

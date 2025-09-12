@@ -1,9 +1,7 @@
 import React from "react";
 import "./HeroSection.css";
-import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-  const navigate = useNavigate();
   return (
     <section id="about" className="hero-section">
       <div className="hero-text-block">
@@ -21,12 +19,6 @@ const HeroSection = () => {
             and decision-making. At Alphanio Nexgen, we're shaping the future with
             smart, adaptive technologies.
           </p>
-        </div>
-
-        <div className="hero-buttons">
-          <button className="btn black" onClick={() => navigate("/chat")}>
-            Get Started
-          </button>
         </div>
       </div>
     </section>
