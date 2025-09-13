@@ -117,7 +117,7 @@ df-messenger {
     left: 12px;
     right: 12px;
     width: auto;
-    height: calc(100vh - 24px);
+    height: 90vh;
     max-height: calc(100vh - 24px);
     border-radius: 12px;
   }
