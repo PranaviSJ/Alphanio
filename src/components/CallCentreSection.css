@@ -48,7 +48,8 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 5%;
-  flex-wrap: wrap;   /* ✅ allows stacking when needed */
+  flex-wrap: wrap;
+  /* ✅ allows stacking when needed */
 }
 
 .customer-down {
@@ -60,7 +61,8 @@
 
 .side-text-wrapper {
   flex: 1 1 55%;
-  max-width: 600px;   /* ✅ prevent text from going too wide */
+  max-width: 600px;
+  /* ✅ prevent text from going too wide */
 }
 
 .customer-down-text {
@@ -76,7 +78,8 @@
   color: #555;
   line-height: 1.7;
   margin-top: 1rem;
-  max-width: 95%;   /* ✅ keeps text neat */
+  max-width: 95%;
+  /* ✅ keeps text neat */
 }
 
 /* Ensure good layout on tablet/mobile */
@@ -97,7 +100,8 @@
   }
 
   .customer-down-subtext {
-    text-align: left; /* ✅ keep readable even if centered above */
+    text-align: left;
+    /* ✅ keep readable even if centered above */
     margin-top: 1.5rem;
   }
 }
@@ -154,6 +158,12 @@
 }
 
 @media (max-width: 480px) {
+  .customer-down {
+    max-width: 80%;
+    margin: 0 auto;
+    flex: none;
+  }
+
   .customer-text-bold {
     font-size: 1.8rem;
   }
