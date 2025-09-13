@@ -101,8 +101,8 @@ df-messenger {
 @media (max-width: 600px) {
   .assistant-bot {
     bottom: 12px;
-    right: 12px;
-    left: 12px;
+    right: 12px;  
+    left: auto;
   }
 
   .bot-icon {
