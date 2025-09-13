@@ -16,6 +16,9 @@ const FeatureSection = () => {
         <div className="img-1-overlay">
           <img src={diagram1} alt="icon" className="img-1-icon" />
           <p className="img-1-title">Smarter Workflow Automation</p>
+          <p className="img-1-subtitle">
+            Simplify operations and enhance customer experience with AI-driven automation at scale.
+          </p>
         </div>
       </div>
 
@@ -23,9 +26,9 @@ const FeatureSection = () => {
       <div className="feature-box img-2">
         <img src={heroImg2} alt="Feature 2" className="feature-img" />
         <div className="feature-overlay">
-          <p className="feature-number">3+</p>
+          <p className="feature-number">13+</p>
           <p className="feature-subtitle">
-            Years of experience in crafting AI solutions
+            Years of hands-on experience designing and deploying AI solutions across mission-critical domains, delivering measurable impact and innovation.
           </p>
         </div>
       </div>
@@ -34,9 +37,9 @@ const FeatureSection = () => {
       <div className="feature-box img-3">
         <img src={heroImg3} alt="Feature 3" className="feature-img" />
         <div className="feature-overlay">
-          <p className="feature-number">10K+</p>
+          <p className="feature-number">100K+</p>
           <p className="feature-subtitle">
-            Conversations automated  with intelligent  AI
+            Harnessing advanced conversational AI to automate over 10,00000 interactions, driving efficiency, consistency, and customer satisfaction across channels.
           </p>
         </div>
       </div>

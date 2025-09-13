@@ -34,7 +34,9 @@ const Navbar = () => {
       className={`navbar ${scrolled ? "fixed" : ""} ${animating}`}
       onAnimationEnd={onAnimationEnd}
     >
-      <img src={logo} alt="Logo" className="logo" />
+      <a href="/" onClick={() => setMenuOpen(false)}>
+        <img src={logo} alt="Logo" className="logo" />
+      </a>
 
       <button
         className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -62,10 +64,10 @@ const Navbar = () => {
           </a>
         </li>
 
-      
+
         <li>
           <a
-            href="https://www.google.com/maps/place/Alphanio+Nexgen/@12.9779248,77.6373175,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1724464f9b41:0x2087065a01ae572d!8m2!3d12.9779248!4d77.6398924!16s%2Fg%2F11q9m8yx8g?entry=ttu&g_ep=EgoyMDI1MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+            href="/contact"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}

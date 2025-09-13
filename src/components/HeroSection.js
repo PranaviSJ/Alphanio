@@ -9,15 +9,13 @@ const HeroSection = () => {
 
         <h1 className="main-heading">
           Empowering<br />
-          People with AI<br />
-          Solutions
+          Telecom with Intelligent<br />
+          Contact Center Solutions
         </h1>
 
         <div className="sub-heading">
           <p>
-            We specialize in building AI-powered solutions that enhance productivity
-            and decision-making. At Alphanio Nexgen, we're shaping the future with
-            smart, adaptive technologies.
+            At Alphanio Nexgen, we engineer AI-powered platforms that transform telecom operations with precision, agility, and insight. Our adaptive technologies are redefining customer experience and operational resilience through advanced Contact Center LLM integration
           </p>
         </div>
       </div>

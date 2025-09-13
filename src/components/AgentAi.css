@@ -195,7 +195,7 @@
   .agent-ai-image {
     width: min(70vw, 400px) !important;
     height: auto !important;
-    margin: 0 0 0 auto !important;          /* ✅ image hugs right */
+    margin-right: 20% !important;          /* ✅ image hugs right */
     display: block !important;
     position: static !important;
   }
@@ -222,14 +222,15 @@
   .text-block p {
     text-align: justify;        /* makes lines fill width evenly */
   }
+
 }
 
 
 /* Small phones: keep image responsive on right */
 @media (max-width: 480px) {
   .agent-ai-image {
-    width: 90vw !important;
-    max-width: 90vw !important;
-    margin: 0 0 0 auto !important;          /* ✅ still right aligned */
+    width: 70vw !important;
+    max-width: 70vw !important;
+    margin: 0 0 0 0 !important;          /* ✅ still right aligned */
   }
 }

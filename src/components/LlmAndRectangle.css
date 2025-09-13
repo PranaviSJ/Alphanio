@@ -263,4 +263,8 @@
   .right-rectangle-text-main {
     font-size: 0.9rem;
   }
+
+  .llm-rectangle-wrapper {
+    padding: 0.5rem;
+  }
 }

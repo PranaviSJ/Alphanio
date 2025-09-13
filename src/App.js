@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 
 import ChatPage from './components/ChatPage';
 import AssistantBot from './components/AssistantBot';  
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
         } />
 
         {/* Contact Page → Redirects to ChatPage */}
-        <Route path="/contact" element={<ChatPage />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/chat" element={<ChatPage />} />
       </Routes>
     </Router>

@@ -5,6 +5,11 @@
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   text-align: center;
   padding: clamp(1.5rem, 5vh, 4rem) clamp(0.75rem, 2vw, 2rem);
+
+  background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+  width: 100%;
+  position: relative;
+  z-index: 0;
 }
 
 /* Heading */
@@ -32,7 +37,7 @@
 
 .marquee {
   display: flex;
-  width: max-content;
+  width: 100%;
   animation: marquee 40s linear infinite; /* adjust speed */
 }
 
@@ -42,20 +47,21 @@
   100% { transform: translateX(-100%); }
 }
 
-
 /* ✅ Card styles - rectangular with slight curve */
 .card {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
   width: 20%;
-  margin-right: 1%;
-  border-radius: 12px;       /* rectangle with curve */
+  margin: 1%;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* subtle depth */
-  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #6db6ff 0%, #e2e8f0 100%);
+  position: relative;
+  z-index: 1; /* keep cards above gradient */
 }
-.card-small { width: 18%; }
+.card-small { width: 30%; }
 .card-large { width: 24%; }
 
 .img-wrap {
@@ -122,23 +128,25 @@
 
 .below-line1 {
   font-weight: 700;
-  font-size: 0.7rem;
-  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: #111;
 }
 
 .below-line2 {
   font-weight: 500;
-  font-size: 0.7rem;
-  margin: 0;
+  font-size: 0.75rem;
   color: #6E6E6E;
+  margin-top: 0.2rem;
 }
 
 .inline-row {
   display: flex;
   align-items: center;
-  gap: 1.2%;
-  width: 100%;
-  margin-top: 0.5vh;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
 }
 
 .thumb {
@@ -148,14 +156,71 @@
 .thumb--s { width: 15%; }
 .card-large .thumb--s { width: 9%; }
 
-/* Responsive */
 @media (max-width: 760px) {
   .card {
-    width: 60% !important;
+    width: 90% !important;   /* smaller but fills nicely */
+    margin: 0 auto 1rem;
+  }
+
+  .img-wrap {
+    height: 220px;           /* reduce image height */
+  }
+
+  .below-caption {
+    top: 6%;
+    left: 5%;
+    right: 5%;
+    gap: 0.6vh;
+  }
+
+  .below-quote {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .below-line1 {
+    font-size: 0.75rem;
+  }
+
+  .below-line2 {
+    font-size: 0.7rem;
+  }
+
+  .thumb--s {
+    width: 16%;
   }
 }
+
 @media (max-width: 480px) {
-  .card {
-    width: 80% !important;
+  .testimonial-container {
+    margin-top: -5vh;
+    padding: 1.2rem 0.8rem;
+    width: 90%;             /* let container breathe */
   }
+
+  .card {
+    width: 95% !important;   /* almost full width */
+    margin-left: 1% !important;
+  }
+
+  .img-wrap {
+    height: 180px;           /* further reduce image height */
+  }
+
+  .below-quote {
+    font-size: 0.8rem;
+  }
+
+  .below-line1,
+  .below-line2 {
+    font-size: 0.7rem;
+  }
+
+  .thumb--s {
+    width: 18%;
+  }
+
+  .card-small {
+    width: 100% !important;
+  } 
 }

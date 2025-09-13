@@ -49,6 +49,7 @@
   text-align: center;
   padding: 1vh;
   color: #353131;
+  width: 70%;
 }
 
 .img-1 img {
@@ -87,11 +88,19 @@
 }
 
 .feature-subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
   font-weight: 500;
   margin: 0;
   line-height: 1.4;
   max-width: 90%;
+  white-space: normal;
+}
+
+.img-1-subtitle {
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 100%;
   white-space: normal;
 }
 
@@ -128,18 +137,6 @@
   font-weight: 700;
   margin: 0;
 }
-
-.feature-box.img-3 .feature-subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.4;
-  max-width: 90%;
-  white-space: normal;
-}
-
-
-
 
 @media screen and (max-width: 480px) {
   .feature-section {
