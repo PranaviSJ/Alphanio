@@ -158,6 +158,10 @@
 }
 
 @media (max-width: 480px) {
+  .customer-top {
+    flex: none;
+  }
+
   .customer-down {
     max-width: 80%;
     margin: 0 auto;

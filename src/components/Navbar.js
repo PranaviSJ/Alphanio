@@ -68,8 +68,6 @@ const Navbar = () => {
         <li>
           <a
             href="/contact"
-            target="_blank"
-            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
             style={{ cursor: "pointer" }}
           >
