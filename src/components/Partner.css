@@ -1,58 +1,83 @@
+/* ===== Section ===== */
 .partner-section {
   width: 100%;
   padding: 1rem 2%;
   box-sizing: border-box;
 }
 
-/* Two columns: left (text + TrustedBy), right (partner image) */
+/* Two columns */
 .partner-wrap {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
+  justify-content: center;      /* center columns horizontally */
+  align-items: center;          /* center vertically for nice balance */
   gap: 2%;
+  width: 100%;
+  min-height: 60vh;             /* creates space to truly center content */
 }
 
-/* ===== LEFT COLUMN ===== */
+/* ===== Left column ===== */
 .partner-left {
-  margin-top: 7%;
-  display: block;
-  flex: 0 0 40%;
-  margin-left: 10%;
+  flex: 0 1 48%;
+  margin-left: 5%;
 }
 
-/* ===== RIGHT IMAGE ===== */
-.partner-img {
-  max-width: 40vw;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  flex: 0 0 auto;
-  margin-right: 5%;
-  margin-top: 5%;
-}
-
-/* ===== TEXT STYLES ===== */
 .partner-text {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   font-weight: 700;
   color: #160637;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 1.4;
-  white-space: pre-line;
-  word-break: keep-all;
-  overflow-wrap: normal;
-  margin-left: -16%;
-  margin-top: 0%;
-  margin-bottom: 13%;
+  margin-bottom: 2rem;
 }
 
-/* TrustedBy image */
+/* Trusted by image */
 .trustedby-img {
   display: block;
   height: auto;
   max-width: 33vw;
-  margin-top: -8%;
+  margin: 1rem auto 0 auto;
+  object-fit: contain;          /* keep aspect ratio */
+}
+
+/* ===== Right column ===== */
+.partner-right {
+  flex: 0 1 45%;
+  display: flex;
+  align-items: center;          /* vertical centering of image block */
+  justify-content: center;      /* horizontal centering of image block */
+  padding: 1rem;
+  margin-right: 5%;
+}
+
+/* Companies row wraps a single image now */
+.companies-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* The companies.png itself */
+.partner-collage-img {
+  width: 100%;
+  max-width: 640px;             /* desktop cap so it “fits” */
+  height: auto;
+  display: block;
+  object-fit: contain;          /* never crop or distort */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.partner-collage-img:hover {
+  transform: scale(1.03);
+}
+
+/* Robot/illustration on right side (if used elsewhere) */
+.partner-img {
+  max-width: 35vw;
+  height: auto;
+  display: block;
   object-fit: contain;
 }
 
@@ -69,94 +94,50 @@
   border: 0;
 }
 
-/* ===== COMPANIES LIST ===== */
-.companies-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 2rem; /* row gap, column gap */
-  margin-top: 5vh;
-  margin-left: 0%;
-  max-width: 80%;
-  justify-content: center; /* centers the logos for balance */
-}
-
-.company-name {
-  font-weight: 600;                /* slightly softer bold */
-  color: #444;                     /* richer grey */
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;           /* cleaner spacing */
-  white-space: nowrap;
-  cursor: pointer;
-  
-  /* Aesthetic enhancements */
-  background: linear-gradient(90deg, #6a11cb, #2575fc); /* gradient text */
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-clip: text;
-  background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  transition: all 0.3s ease-in-out;
-}
-
-.company-name:hover {
-  transform: scale(1.12) translateY(-2px);  /* slight lift effect */
-  text-shadow: 0 4px 8px rgba(0,0,0,0.15); /* glow/shadow */
-  background: linear-gradient(90deg, #2575fc, #6a11cb); /* reverse gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .partner-wrap {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
+    min-height: auto;
   }
 
   .partner-left {
-    margin-top: 0;
-    margin-left: 0;
+    margin: 0;
     text-align: center;
     flex: 0 0 auto;
   }
 
   .partner-text {
     margin-left: 0;
+    font-size: 1.4rem;
   }
 
   .trustedby-img {
-    max-width: 90vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .partner-right {
     width: 100%;
-    margin-left: 50%;
+    margin: 0;
+    margin-top: 1rem;
   }
 
   .partner-img {
-    transform: translateX(-50%);
-    max-width: 100vw;
-    margin-right: 0;
-    margin-top: 1rem;
-    align-self: flex-end;
-    margin-bottom: 0;
+    max-width: 80vw;
+    margin: 0 auto;
+    display: block;
   }
 
-  /* Companies responsive layout */
   .companies-list {
     justify-content: center;
-    margin-left: 0;
-    max-width: 100%;
-    gap: 0.8rem 1.2rem;
+    margin-top: 1.5rem;
   }
 
-  .company-name {
-    font-size: 0.95rem;
+  .partner-collage-img {
+    max-width: 90vw;            /* fill but keep margins on mobile */
   }
 }
