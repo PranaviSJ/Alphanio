@@ -1,107 +1,87 @@
 import React from "react";
 import "./LlmAndRectangle.css";
 
+// Import images
+import agent from "../assets/AgentAi.png";
+import faq from "../assets/FAQ.png";
+import healthcare from "../assets/healthcare.png";
+import banking from "../assets/Banking.png";
+import insurance from "../assets/Insurance.png";
+import scheduler from "../assets/Scheduler.png";
+import redirector from "../assets/Redirector.png";
+import outbound from "../assets/Outbound.png";
+
+// Feature data array to simplify zig-zag
+const features = [
+  { 
+    title: "Alpha-Flashbook", 
+    text: "Your real-time agent enablement engine. Alpha-Flashbook delivers instant access to contextual knowledge, dynamic scripts, and compliance-ready responses—empowering agents to resolve queries faster and with greater confidence.", 
+    img: agent 
+  },
+  { 
+    title: "Alpha-FAQ", 
+    text: "A self-service powerhouse that transforms static FAQs into dynamic, conversational experiences. Powered by LLMs, it understands natural language, adapts to evolving queries, and deflects up to 40% of repetitive interactions.", 
+    img: faq 
+  },
+  { 
+    title: "Alpha-Healthcare Assist", 
+    text: "Built for healthcare contact centers, this solution leverages domain-tuned LLMs to triage patient inquiries, automate appointment handling, and ensure HIPAA-compliant engagement. It enhances empathy while reducing wait times and operational overhead.", 
+    img: healthcare 
+  },
+  { 
+    title: "Alpha-Banking Assist", 
+    text: "Designed for financial institutions, this assistant handles KYC, transaction inquiries, fraud alerts, and loan servicing with precision. It ensures secure, real-time engagement while maintaining regulatory compliance and customer trust.", 
+    img: banking 
+  },
+  { 
+    title: "Alpha-Insurance Assist", 
+    text: "Tailored for insurers, this solution automates claims intake, policy queries, and underwriting support. It integrates seamlessly with core systems to deliver fast, compliant, and personalized service across the policyholder journey.", 
+    img: insurance 
+  },
+  { 
+    title: "Alpha-Schedular", 
+    text: "An intelligent scheduling assistant that automates appointment booking, rescheduling, and reminders across channels. Integrated with CRM and calendar systems, it ensures frictionless coordination between customers and service teams.", 
+    img: scheduler 
+  },
+  { 
+    title: "Alpha-Redirector", 
+    text: "Smart call and chat routing powered by real-time intent detection and sentiment analysis. Alpha-Redirector ensures every interaction reaches the right agent or bot—reducing transfers, improving resolution rates, and optimizing queue management.", 
+    img: redirector 
+  },
+  { 
+    title: "Alpha-Outbound Assist", 
+    text: "A proactive engagement engine that orchestrates outbound campaigns—be it renewals, upsells, surveys, or reminders. With predictive dialing, personalization, and compliance tracking, it maximizes outreach impact and agent productivity.", 
+    img: outbound 
+  },
+];
+
 export const LlmSection = () => {
   return (
     <section className="llm-section">
       <div className="llm-content">
         <h1 className="llm-heading">
-          <span className="gradient-text">Reimagining</span> Contact Center
-          Intelligence with the Alpha Suite by Alphanio Nexgen
+          <span className="gradient-text">Reimagining</span> Contact Center Intelligence
         </h1>
 
-        <p className="llm-intro">
-          In today’s experience-driven economy, enterprises demand more than just
-          reactive support—they need intelligent, proactive, and scalable solutions
-          that elevate every customer interaction. At Alphanio Nexgen, we’ve
-          engineered the Alpha Suite: a modular, AI-powered ecosystem designed to
-          revolutionize contact center operations across industries.
-        </p>
-
-        {/* 🔹 Agent Enablement */}
-        <h2 className="category-heading">Agent Enablement</h2>
-        <ul className="llm-feature-list">
-          <li>
-            <span className="feature-title">🔍 Alpha-Flashbook</span> <br />
-            Your real-time agent enablement engine. Alpha-Flashbook delivers instant
-            access to contextual knowledge, dynamic scripts, and compliance-ready
-            responses—empowering agents to resolve queries faster and with greater
-            confidence.
-          </li>
-          <li>
-            <span className="feature-title">❓ Alpha-FAQ</span> <br />
-            A self-service powerhouse that transforms static FAQs into dynamic,
-            conversational experiences. Powered by LLMs, it understands natural
-            language, adapts to evolving queries, and deflects up to 40% of
-            repetitive interactions.
-          </li>
-        </ul>
-
-        {/* 🔹 Healthcare */}
-        <h2 className="category-heading">Healthcare</h2>
-        <ul className="llm-feature-list">
-          <li>
-            <span className="feature-title">🏥 Alpha-Healthcare Assist</span> <br />
-            Built for healthcare contact centers, this solution leverages
-            domain-tuned LLMs to triage patient inquiries, automate appointment
-            handling, and ensure HIPAA-compliant engagement. It enhances empathy
-            while reducing wait times and operational overhead.
-          </li>
-        </ul>
-
-        {/* 🔹 Finance & Insurance */}
-        <h2 className="category-heading">Finance & Insurance</h2>
-        <ul className="llm-feature-list">
-          <li>
-            <span className="feature-title">💳 Alpha-Banking Assist</span> <br />
-            Designed for financial institutions, this assistant handles KYC,
-            transaction inquiries, fraud alerts, and loan servicing with precision.
-            It ensures secure, real-time engagement while maintaining regulatory
-            compliance and customer trust.
-          </li>
-          <li>
-            <span className="feature-title">🛡️ Alpha-Insurance Assist</span> <br />
-            Tailored for insurers, this solution automates claims intake, policy
-            queries, and underwriting support. It integrates seamlessly with core
-            systems to deliver fast, compliant, and personalized service across the
-            policyholder journey.
-          </li>
-        </ul>
-
-        {/* 🔹 Engagement & Scheduling */}
-        <h2 className="category-heading">Engagement & Scheduling</h2>
-        <ul className="llm-feature-list">
-          <li>
-            <span className="feature-title">📅 Alpha-Schedular</span> <br />
-            An intelligent scheduling assistant that automates appointment booking,
-            rescheduling, and reminders across channels. Integrated with CRM and
-            calendar systems, it ensures frictionless coordination between
-            customers and service teams.
-          </li>
-          <li>
-            <span className="feature-title">🔁 Alpha-Redirector</span> <br />
-            Smart call and chat routing powered by real-time intent detection and
-            sentiment analysis. Alpha-Redirector ensures every interaction reaches
-            the right agent or bot—reducing transfers, improving resolution rates,
-            and optimizing queue management.
-          </li>
-          <li>
-            <span className="feature-title">📞 Alpha-Outbound Assist</span> <br />
-            A proactive engagement engine that orchestrates outbound campaigns—be it
-            renewals, upsells, surveys, or reminders. With predictive dialing,
-            personalization, and compliance tracking, it maximizes outreach impact
-            and agent productivity.
-          </li>
-        </ul>
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className={`llm-feature zigzag ${index % 2 === 0 ? "normal" : "reverse"}`}
+          >
+            <img src={feature.img} alt={feature.title} className="feature-image" />
+            <div className="feature-text">
+              <span className="feature-title">{feature.title}</span>
+              <p>{feature.text}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export const LlmAndRectangleWrapper = () => {
-  return (
-    <div id="products" className="llm-rectangle-wrapper">
-      <LlmSection />
-    </div>
-  );
-};
+export const LlmAndRectangleWrapper = () => (
+  <div id="products" className="llm-rectangle-wrapper">
+    <LlmSection />
+  </div>
+);
