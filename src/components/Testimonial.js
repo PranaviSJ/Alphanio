@@ -24,54 +24,17 @@ const items = [
 function Testimonial() {
   return (
     <section className="testimonial-container" aria-labelledby="testimonial-heading">
-      <h2 id="testimonial-heading" className="testimonial-heading">
-        Customers love Alphanio
-      </h2>
-
       <p className="testimonial-subtext">
         We always wanted to give the best solution to our customers,<br />
         and so far we made it. Hear what our customer says
       </p>
 
-      {/* Marquee wrapper */}
+      {/* Testimonials Grid */}
       <div className="marquee-wrapper">
         <div className="marquee">
           {items.map((item, i) => (
             <figure
-              key={`set1-${i}`}
-              className={`card ${item.size === "large" ? "card-large" : "card-small"}`}
-            >
-              <div className="img-wrap">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className={item.size === "large" ? "large-img" : "small-img"}
-                  loading="lazy"
-                />
-
-                <figcaption className="below-caption">
-                  <div className="below-brand">COGNIZANT</div>
-                  <div className="below-quote">
-                    Alphanio Team helped me to migrate from AWS to SAP Platform.
-                  </div>
-
-                  <img src={quotes} alt="Quote mark" className="quotes-img" loading="lazy" />
-
-                  <div className="inline-row">
-                    <div className="below-line1">Peary Man</div>
-                    <img src={item.person} alt="profile" className="thumb thumb--s" loading="lazy" />
-                  </div>
-
-                  <div className="below-line2">Cognizant - Tech</div>
-                </figcaption>
-              </div>
-            </figure>
-          ))}
-
-          {/* duplicate for seamless loop */}
-          {items.map((item, i) => (
-            <figure
-              key={`set2-${i}`}
+              key={i}
               className={`card ${item.size === "large" ? "card-large" : "card-small"}`}
             >
               <div className="img-wrap">

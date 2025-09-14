@@ -2,19 +2,28 @@ import React from "react";
 import "./Partner.css";
 import partnerImage from "../assets/partnerimage.png";
 import trustedBy from "../assets/Trustedby.png";
-import companies from "../assets/companies.png";
 
 function Partner() {
+  const companies = [
+    "Accenture", "Infosys", "DBS Bank", "NTT Data", "Google",
+    "Twilio", "Kore AI", "Salesforce", "ServiceNow", "Nice",
+    "Genesys", "Five9", "Modivcare Labs", "Hexaware", "Servion",
+    "Verint", "Zoom", "Microsoft", "Amazon", "Mulesoft",
+    "NextGen", "Avaya", "Cisco", "Sprinklr"
+  ];
+
   return (
-    <section id = "partners" className="partner-section" aria-labelledby="partner-heading">
+    <section id="partners" className="partner-section" aria-labelledby="partner-heading">
       <h2 id="partner-heading" className="sr-only">Our Partners</h2>
 
       <div className="partner-wrap">
         {/* LEFT: text + logos */}
         <div className="partner-left">
           <p className="partner-text">
-            Alphanio partnered with various companies,
-            to provide the customer “The Best”
+            Alphanio Nexgen proudly works with leading enterprises
+            to deliver best-in-class AI solutions, 
+            ensuring every customer receives exceptional service,
+            innovation, and value.
           </p>
           <div className="partner-logos">
             <img
@@ -23,12 +32,13 @@ function Partner() {
               className="trustedby-img"
               loading="lazy"
             />
-            <img
-              src={companies}
-              alt="Company logos"
-              className="companies-img"
-              loading="lazy"
-            />
+
+            {/* Companies as text */}
+            <div className="companies-list">
+              {companies.map((company, index) => (
+                <span key={index} className="company-name">{company}</span>
+              ))}
+            </div>
           </div>
         </div>
 

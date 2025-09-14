@@ -3,6 +3,8 @@
 
 .agent-ai-wrapper {
   min-height: 100vh;
+
+
   padding: 2rem;
   box-sizing: border-box;
   background: linear-gradient(to top, #ffffff 0%, #c6dafd 50%, #e6b0e7 100%);
@@ -12,7 +14,8 @@
 
 /* Row layout on desktop */
 .agent-ai-content {
-   margin-top: -15vh;
+   margin-top: -1vh;
+   margin-left: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +37,7 @@
   color: black;
   margin-bottom: 1rem;
   text-align: left;
-  margin-left: 10%;
+  margin-left: 16%;
   margin-top: 0;
 }
 
@@ -59,7 +62,7 @@
   color: #202020;
   line-height: 1.6;
   text-align: left;
-  margin-left: 10%;
+  margin-left: 12%;
   max-width: 100%;
 }
 
@@ -79,61 +82,6 @@
   max-height: 100%;
   margin-right: 10%;
 }
-
-/* Button Group Wrapper */
-.agent-ai-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  margin-left: 10%;
-  flex-wrap: wrap;
-  /* buttons wrap on small screens */
-}
-
-
-/* Primary button — white bg, black text, semi-bold, rounded rectangle */
-.agent-ai-btn-primary {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  background: #fff;
-  color: #000;
-  padding: 0.85rem 1.8rem;
-  border-radius: 0.625vw;
-  /* rounded rectangle */
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.agent-ai-btn-primary:hover {
-  background: #f5f5f5;
-}
-
-/* Secondary button — transparent bg, black text, gradient border */
-.agent-ai-btn-secondary {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  color: #000;
-  padding: 0.83rem 1.75rem;
-  background: transparent;
-  /* fully transparent inside */
-
-  border-radius: 0.625vw;
-  /* responsive curved rectangle */
-  background: linear-gradient(#d5e1f5, #d5e1f5) padding-box,
-    /* inside is white/transparent */
-    linear-gradient(135deg, #6A57C9, #51C5F2) border-box;
-  /* border gradient */
-  border: 0.110vw solid transparent;
-  /* must be transparent to show gradient */
-  cursor: pointer;
-  transition: filter 0.2s ease;
-}
-
-.agent-ai-btn-secondary:hover {
-  filter: brightness(1.1);
-}
-
 
 
 /* ===== HERO SECTION: Prevent Text-Image Overlap ===== */

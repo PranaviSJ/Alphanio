@@ -1,48 +1,80 @@
-/* LlmSection.css + Rectangle.css merged */
+/* =========================
+   LlmSection + Rectangle Styling
+   ========================= */
 
 .llm-section {
-  text-align: center;
   margin-left: 10%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
   position: relative;
   flex-wrap: wrap;
-  /* allow wrapping for smaller screens */
 }
 
 .llm-heading {
   text-align: left;
-  font-size: 3vw;
-  width: 80%;
+  font-size: 2.7vw;
+  width: 85%;
   font-weight: bold;
   color: black;
+  line-height: 1.3;
 }
 
 .gradient-text {
-  background: linear-gradient(90deg,
-      #b23baf 0%,
-      #ff8080 10%,
-      #6508f0 28%);
+  background: linear-gradient(90deg, #b23baf 0%, #ff8080 10%, #6508f0 28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.llm-bullets {
-  list-style-type: disc;
-  padding-left: 20.5vw;
+/* Intro paragraph */
+.llm-intro {
+  font-size: 1.15rem;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 1rem 0 2rem;
+  line-height: 1.7;
   font-family: "Instrument Sans", sans-serif;
-  font-style: italic;
-  font-size: 4vh;
+  max-width: 90%;
   text-align: left;
-  margin-top: 1.5vh;
-  line-height: 1.9;
-  margin-left: -31%;
-  color: rgba(0, 0, 0, 0.66);
+  font-weight: bold;
 }
 
+/* Feature list */
+.llm-feature-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 90%;
+}
+
+.llm-feature-list li {
+  padding-left: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.llm-feature-list li:hover {
+  transform: translateX(5px);
+  color: #333;
+}
+
+.feature-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #2c2c2c;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+/* Right-side image */
 .llm-image-container {
   flex-shrink: 0;
 }
@@ -52,9 +84,13 @@
   position: absolute;
   top: 5vh;
   right: 5vw;
-  width: 50%;
+  width: 45%;
   height: auto;
 }
+
+/* =========================
+   Rectangle Cards
+   ========================= */
 
 .rectangle-container {
   display: flex;
@@ -65,13 +101,11 @@
   position: relative;
   margin-top: 5%;
   flex-wrap: wrap;
-  /* allows stacking on small screens */
 }
 
 .rectangle-with-text {
   position: relative;
   flex: 1 1 45%;
-  /* grow & shrink, 2 per row on desktop */
   max-width: 500px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -79,7 +113,6 @@
 
 .rectangle-with-text:hover {
   transform: translateY(-5px);
-  /* button-like hover effect */
 }
 
 .rectangle-img {
@@ -107,7 +140,6 @@
 .right-rectangle-text-main {
   font-size: 1.1rem;
 }
-
 
 .learn-more-container {
   display: flex;
@@ -171,14 +203,31 @@
   min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
-
-  background: linear-gradient(to bottom,
-      #ffffff 0%,
-      #c6dafd 50%,
-      #e6b0e7 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #c6dafd 50%, #e6b0e7 100%);
 }
 
-/* 📱 Mobile Responsive Styles */
+/* =========================
+   Responsive Styles
+   ========================= */
+
+@media (max-width: 1024px) {
+  .llm-heading {
+    font-size: 4vw;
+    width: 100%;
+  }
+
+  .llm-image {
+    position: static;
+    width: 80%;
+    margin: 1rem auto 0;
+  }
+
+  .llm-intro,
+  .llm-feature-list {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .llm-section {
     flex-direction: column;
@@ -188,23 +237,21 @@
 
   .llm-heading {
     font-size: 6vw;
-    width: 100%;
     text-align: center;
   }
 
- .llm-bullets {
-    font-size: 2.4vh;
-    padding-left: 0;
-    margin-left: 0;
-    transform: translateX(23%);
-    text-align: left;
-    white-space: nowrap; /* keep each line on one row */
-}
+  .llm-intro {
+    text-align: center;
+    font-size: 1rem;
+  }
 
-  .llm-image {
-    position: static;
-    width: 80%;
-    margin: 1rem auto 0;
+  .llm-feature-list {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .feature-title {
+    font-size: 1rem;
   }
 
   .rectangle-container {
@@ -226,7 +273,7 @@
 
   .llm-text,
   .right-rectangle-text-main {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .learn-more-text,
@@ -240,8 +287,17 @@
     font-size: 7vw;
   }
 
-  .llm-bullets {
-    font-size: 2.2vh;
+  .llm-intro {
+    font-size: 0.9rem;
+  }
+
+  .llm-feature-list {
+    font-size: 0.85rem;
+    gap: 1rem;
+  }
+
+  .feature-title {
+    font-size: 0.95rem;
   }
 
   .llm-image {
@@ -256,15 +312,15 @@
   .text-overlay.right-text-overlay {
     left: 15%;
     top: 12%;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .llm-text,
   .right-rectangle-text-main {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .llm-rectangle-wrapper {
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
 }

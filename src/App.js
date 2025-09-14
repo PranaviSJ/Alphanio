@@ -38,7 +38,7 @@ function App() {
           </div>
         } />
 
-        {/* Contact Page → Redirects to ChatPage */}
+        {/* Contact Page */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/chat" element={<ChatPage />} />
       </Routes>

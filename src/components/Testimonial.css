@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
-
 .testimonial-container {
   margin-top: -20vh;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   text-align: center;
   padding: clamp(1.5rem, 5vh, 4rem) clamp(0.75rem, 2vw, 2rem);
 
-  background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+  /* Smooth transition from hero end color to white */
+  background: linear-gradient(to bottom, #e7f0fe 0%, #ffffff 100%);
+
   width: 100%;
   position: relative;
   z-index: 0;
 }
+
 
 /* Heading */
 .testimonial-heading {
@@ -23,46 +24,40 @@
 
 .testimonial-subtext {
   color: #0b0b0b;
-  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   line-height: 1.5;
+  font-weight: bolder;
   margin-bottom: 5%;
-  margin-top: 0.6%;
+  margin-top: 2%;
 }
 
-/* ✅ Marquee wrapper */
+/* ✅ Testimonials Grid */
 .marquee-wrapper {
-  overflow: hidden;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* spacing between cards */
+  margin-top: 2rem;
 }
 
 .marquee {
-  display: flex;
-  width: 100%;
-  animation: marquee 40s linear infinite; /* adjust speed */
+  display: contents; /* remove animation container effect */
 }
 
-/* Infinite scrolling effect */
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-/* ✅ Card styles - rectangular with slight curve */
+/* ✅ Card styles */
 .card {
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
-  width: 20%;
-  margin: 1%;
+  flex: 0 1 calc(25% - 1.5rem); /* 4 per row on desktop */
+  min-width: 250px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   background: linear-gradient(135deg, #6db6ff 0%, #e2e8f0 100%);
   position: relative;
-  z-index: 1; /* keep cards above gradient */
+  z-index: 1;
 }
-.card-small { width: 30%; }
-.card-large { width: 24%; }
 
 .img-wrap {
   position: relative;
@@ -86,7 +81,7 @@
   transform: scale(1.02);
 }
 
-/* Caption inside card */
+/* Caption */
 .below-caption {
   position: absolute;
   top: 10%;
@@ -124,22 +119,8 @@
   user-select: none;
   object-fit: contain;
 }
-.card-large .quotes-img { width: 10%; }
 
-.below-line1 {
-  font-weight: 700;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  color: #111;
-}
-
-.below-line2 {
-  font-weight: 500;
-  font-size: 0.75rem;
-  color: #6E6E6E;
-  margin-top: 0.2rem;
-}
-
+/* Inline profile row */
 .inline-row {
   display: flex;
   align-items: center;
@@ -154,40 +135,26 @@
   object-fit: cover;
 }
 .thumb--s { width: 15%; }
-.card-large .thumb--s { width: 9%; }
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 1 calc(45% - 1.5rem); /* 2 per row on tablet */
+  }
+}
 
 @media (max-width: 760px) {
   .card {
-    width: 90% !important;   /* smaller but fills nicely */
+    flex: 0 1 100%; /* 1 per row on mobile */
     margin: 0 auto 1rem;
   }
 
   .img-wrap {
-    height: 220px;           /* reduce image height */
-  }
-
-  .below-caption {
-    top: 6%;
-    left: 5%;
-    right: 5%;
-    gap: 0.6vh;
+    height: 220px;
   }
 
   .below-quote {
     font-size: 0.85rem;
-    line-height: 1.35;
-  }
-
-  .below-line1 {
-    font-size: 0.75rem;
-  }
-
-  .below-line2 {
-    font-size: 0.7rem;
-  }
-
-  .thumb--s {
-    width: 16%;
   }
 }
 
@@ -195,32 +162,14 @@
   .testimonial-container {
     margin-top: -5vh;
     padding: 1.2rem 0.8rem;
-    width: 90%;             /* let container breathe */
-  }
-
-  .card {
-    width: 95% !important;   /* almost full width */
-    margin-left: 1% !important;
   }
 
   .img-wrap {
-    height: 180px;           /* further reduce image height */
+    height: 180px;
   }
 
   .below-quote {
     font-size: 0.8rem;
   }
-
-  .below-line1,
-  .below-line2 {
-    font-size: 0.7rem;
-  }
-
-  .thumb--s {
-    width: 18%;
-  }
-
-  .card-small {
-    width: 100% !important;
-  } 
 }
+

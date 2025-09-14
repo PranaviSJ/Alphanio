@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,9 +35,9 @@ const Navbar = () => {
       className={`navbar ${scrolled ? "fixed" : ""} ${animating}`}
       onAnimationEnd={onAnimationEnd}
     >
-      <a href="/" onClick={() => setMenuOpen(false)}>
+      <HashLink smooth to="/#hero" onClick={() => setMenuOpen(false)}>
         <img src={logo} alt="Logo" className="logo" />
-      </a>
+      </HashLink>
 
       <button
         className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -49,30 +50,24 @@ const Navbar = () => {
 
       <ul className={`navbar-right ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="#about" onClick={() => setMenuOpen(false)}>
+          <HashLink smooth to="/#about" onClick={() => setMenuOpen(false)}>
             About
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a href="#services" onClick={() => setMenuOpen(false)}>
+          <HashLink smooth to="/#services" onClick={() => setMenuOpen(false)}>
             Services
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a href="#products" onClick={() => setMenuOpen(false)}>
+          <HashLink smooth to="/#products" onClick={() => setMenuOpen(false)}>
             Products
-          </a>
+          </HashLink>
         </li>
-
-
         <li>
-          <a
-            href="/contact"
-            onClick={() => setMenuOpen(false)}
-            style={{ cursor: "pointer" }}
-          >
+          <HashLink smooth to="/contact" onClick={() => setMenuOpen(false)}>
             Contact
-          </a>
+          </HashLink>
         </li>
       </ul>
     </nav>

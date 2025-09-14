@@ -9,10 +9,9 @@
 
 /* floating round icon */
 .bot-icon {
-  background: linear-gradient(135deg, #a78bfa, #93c5fd);
-  color: #fff;
+  background: linear-gradient(135deg, #64748b, #475569); /* slate gradient */
+  color: #ffffff;
   font-size: 22px;
-  border: none;
   border-radius: 50%;
   padding: 14px;
   width: 56px;
@@ -21,15 +20,24 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+
+  /* default halo for light bg */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25),
+              0 0 6px rgba(0, 0, 0, 0.15);
+
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-/* hover effect */
-.bot-icon:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+/* adapts halo when bg is dark (use parent class/section selector) */
+.dark-bg .bot-icon {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25),
+              0 0 8px rgba(255, 255, 255, 0.4); /* lighter glow */
 }
+
+.bot-icon:hover {
+  transform: scale(1.1);
+}
+
 
 /* popup window */
 .bot-popup {
