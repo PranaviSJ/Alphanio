@@ -10,7 +10,7 @@ function Partner() {
       <h2 id="partner-heading" className="sr-only">Our Partners</h2>
 
       <div className="partner-wrap">
-        {/* LEFT: headline + Trusted By + illustration */}
+        {/* LEFT: text + Trusted By + companies image */}
         <div className="partner-left">
           <p className="partner-text">
             Alphanio Nexgen proudly works with leading enterprises to deliver best-in-class AI solutions, ensuring every customer receives exceptional service, innovation, and value.
@@ -26,18 +26,7 @@ function Partner() {
             />
           </div>
 
-          {/* Optional illustration kept; remove if not needed */}
-          <img
-            src={partnerImage}
-            alt="Business handshake with AI assistant"
-            className="partner-img"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        {/* RIGHT: companies collage centered */}
-        <div className="partner-right">
+          {/* Companies collage */}
           <div className="companies-list">
             <img
               src={companiesImage}
@@ -47,6 +36,17 @@ function Partner() {
               decoding="async"
             />
           </div>
+        </div>
+
+        {/* RIGHT: Partner illustration */}
+        <div className="partner-right">
+          <img
+            src={partnerImage}
+            alt="Business handshake with AI assistant"
+            className="partner-img"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
