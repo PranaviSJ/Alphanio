@@ -2,6 +2,9 @@ import React from "react";
 import "./Footer.css";
 import logo from "../assets/logo.png";
 import { HashLink } from "react-router-hash-link";
+import { features } from "./LlmAndRectangle";
+
+const OFFSET = 120; // pixels from top
 
 const Footer = () => {
   return (
@@ -11,69 +14,61 @@ const Footer = () => {
         <img src={logo} alt="Company Logo" className="footer-logo" />
       </div>
 
-      {/* ✅ Grouped links */}
+      {/* Links */}
       <div className="footer-links">
         {/* Quick links */}
         <div className="footer-quicklinks">
           <h3 className="quicklinks-title">Quick links</h3>
           <ul className="quicklinks-list">
             <li>
-              <HashLink smooth to="/#about" className="quicklink-item">
+              <HashLink
+                smooth
+                to="/#about"
+                scroll={el => window.scrollTo({ top: el.offsetTop - OFFSET, behavior: "smooth" })}
+                className="quicklink-item"
+              >
                 About Us
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="/#services" className="quicklink-item">
+              <HashLink
+                smooth
+                to="/#services"
+                scroll={el => window.scrollTo({ top: el.offsetTop - OFFSET, behavior: "smooth" })}
+                className="quicklink-item"
+              >
                 Services
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="/#products" className="quicklink-item">
-                Products
-              </HashLink>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/place/Alphanio+Nexgen/@12.9779248,77.6373175,17z"
-                target="_blank"
-                rel="noopener noreferrer"
+              <HashLink
+                smooth
+                to="/#products"
+                scroll={el => window.scrollTo({ top: el.offsetTop - OFFSET, behavior: "smooth" })}
                 className="quicklink-item"
               >
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <HashLink smooth to="/#about" className="quicklink-item">
-                Home
+                Products
               </HashLink>
             </li>
           </ul>
         </div>
 
-        {/* Products */}
+        {/* Products dynamically scroll to feature heading with offset */}
         <div className="footer-quicklinks">
           <h3 className="quicklinks-title">Products</h3>
           <ul className="quicklinks-list">
-            <li>
-              <HashLink smooth to="/#services" className="quicklink-item">
-                Call Center
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="/#products" className="quicklink-item">
-                LLM
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="/#Agentic AI" className="quicklink-item">
-                Agentic AI
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="/#services" className="quicklink-item">
-                Cloud Solutions
-              </HashLink>
-            </li>
+            {features.map((feature, index) => (
+              <li key={index}>
+                <HashLink
+                  smooth
+                  to={`/#${feature.title.replace(/\s+/g, "-")}`}
+                  scroll={el => window.scrollTo({ top: el.offsetTop - OFFSET, behavior: "smooth" })}
+                  className="quicklink-item"
+                >
+                  {feature.title}
+                </HashLink>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -82,12 +77,22 @@ const Footer = () => {
           <h3 className="quicklinks-title">Company</h3>
           <ul className="quicklinks-list">
             <li>
-              <HashLink smooth to="/#media" className="quicklink-item">
+              <HashLink
+                smooth
+                to="/#media"
+                scroll={el => window.scrollTo({ top: el.offsetTop - OFFSET, behavior: "smooth" })}
+                className="quicklink-item"
+              >
                 Media center
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="/#partners" className="quicklink-item">
+              <HashLink
+                smooth
+                to="/#partners"
+                scroll={el => window.scrollTo({ top: el.offsetTop - OFFSET, behavior: "smooth" })}
+                className="quicklink-item"
+              >
                 Our partners
               </HashLink>
             </li>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./LlmAndRectangle.css";
 
-// Import images
+// ✅ Import images
 import agent from "../assets/AgentAi.png";
 import faq from "../assets/FAQ.png";
 import healthcare from "../assets/healthcare.png";
@@ -11,8 +11,8 @@ import scheduler from "../assets/Scheduler.png";
 import redirector from "../assets/Redirector.png";
 import outbound from "../assets/Outbound.png";
 
-// Feature data array to simplify zig-zag
-const features = [
+// ✅ Export features array for footer usage
+export const features = [
   { 
     title: "Alpha-Flashbook", 
     text: "Your real-time agent enablement engine. Alpha-Flashbook delivers instant access to contextual knowledge, dynamic scripts, and compliance-ready responses—empowering agents to resolve queries faster and with greater confidence.", 
@@ -55,6 +55,7 @@ const features = [
   },
 ];
 
+// ✅ LLM Section with zig-zag layout
 export const LlmSection = () => {
   return (
     <section className="llm-section">
@@ -67,6 +68,7 @@ export const LlmSection = () => {
           <div
             key={index}
             className={`llm-feature zigzag ${index % 2 === 0 ? "normal" : "reverse"}`}
+            id={feature.title.replace(/\s+/g, "-")} // ✅ unique ID for smooth scroll
           >
             <img src={feature.img} alt={feature.title} className="feature-image" />
             <div className="feature-text">
@@ -80,6 +82,7 @@ export const LlmSection = () => {
   );
 };
 
+// ✅ Wrapper with #products ID
 export const LlmAndRectangleWrapper = () => (
   <div id="products" className="llm-rectangle-wrapper">
     <LlmSection />
