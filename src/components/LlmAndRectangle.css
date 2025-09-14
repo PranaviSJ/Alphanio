@@ -1,28 +1,30 @@
 /* =========================
-   LlmSection + Rectangle Styling
+   LLM Section + Rectangle Styling
    ========================= */
 
 .llm-section {
-  margin-left: 10%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  position: relative;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.llm-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .llm-heading {
-  text-align: left;
-  font-size: 2.7vw;
-  width: 85%;
-  font-weight: bold;
-  color: black;
-  line-height: 1.3;
+  font-size: 3.8rem;
+  /* Increased from 3rem */
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 700;
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #b23baf 0%, #ff8080 10%, #6508f0 28%);
+  background: linear-gradient(90deg, #007bff, #00d4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -38,58 +40,69 @@
   max-width: 90%;
   text-align: left;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Feature list */
-.llm-feature-list {
-  list-style-type: none;
-  padding-left: 0;
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 1.3rem;
-  text-align: left;
-  margin-top: 1rem;
-  line-height: 1.7;
-  color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 90%;
-}
-
-.llm-feature-list li {
-  padding-left: 0.2rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.llm-feature-list li:hover {
-  transform: translateX(5px);
+/* Category headings */
+.category-heading {
+  font-size: 2rem;
+  /* Increased from 1.5rem */
+  margin-top: 40px;
+  margin-bottom: 20px;
   color: #333;
+  text-align: center;
+}
+
+/* =========================
+   Features Zig-Zag Layout
+   ========================= */
+
+.llm-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* Keep images left/right */
+}
+
+
+.llm-feature.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-image {
+  width: 20%;
+  /* Keep image size reasonable */
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.feature-text {
+  width: 55%;
+  min-width: 300px;
+  text-align: center;
+  /* Center only text */
 }
 
 .feature-title {
   font-weight: 700;
-  font-size: 1.15rem;
-  color: #2c2c2c;
-  display: inline-block;
-  margin-bottom: 0.3rem;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
 }
 
-/* Right-side image */
-.llm-image-container {
-  flex-shrink: 0;
-}
-
-.llm-image {
-  object-fit: contain;
-  position: absolute;
-  top: 5vh;
-  right: 5vw;
-  width: 45%;
-  height: auto;
+.feature-text p {
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* =========================
-   Rectangle Cards
+   Rectangle Cards (Optional)
    ========================= */
 
 .rectangle-container {
@@ -121,14 +134,14 @@
   border-radius: 12px;
 }
 
-/* Overlay */
+/* Overlay text */
 .text-overlay,
 .text-overlay.right-text-overlay {
   position: absolute;
   color: #545454;
   font-family: "Instrument Sans", sans-serif;
   font-weight: 600;
-  top: 15%;
+  top: 10%;
   left: 12%;
   text-align: left;
   display: flex;
@@ -147,38 +160,13 @@
   gap: 0.3rem;
 }
 
-.learn-more-text {
+.learn-more-text,
+.right-explore-now {
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
   color: black;
   font-size: 1rem;
-}
-
-.external-link-icon {
-  width: 1rem;
-  height: 1rem;
-}
-
-.rectangle-with-text.right-rectangle-text {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-overlay.right-text-overlay {
-  position: absolute;
-  color: #545454;
-  font-family: "Instrument Sans", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  top: 10%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 .right-rectangle-text-main {
@@ -189,15 +177,9 @@
   color: #545454;
 }
 
-.right-explore-now {
-  font-weight: 600;
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 1rem;
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
-  margin-top: 0.2rem;
-}
+/* =========================
+   Wrapper Background
+   ========================= */
 
 .llm-rectangle-wrapper {
   min-height: 100vh;
@@ -212,115 +194,81 @@
 
 @media (max-width: 1024px) {
   .llm-heading {
-    font-size: 4vw;
+    font-size: 6vw;
+    /* Bigger heading on medium screens */
+  }
+
+  .category-heading {
+    font-size: 1.8rem;
+  }
+
+  .feature-image {
+    width: 10%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .llm-feature {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .feature-image {
+    width: 30%;
+  }
+
+  .feature-text {
     width: 100%;
   }
 
-  .llm-image {
-    position: static;
-    width: 80%;
-    margin: 1rem auto 0;
+  .feature-title {
+    font-size: 1.4rem;
   }
 
-  .llm-intro,
-  .llm-feature-list {
-    max-width: 100%;
+  .category-heading {
+    font-size: 1.7rem;
   }
 }
 
 @media (max-width: 768px) {
   .llm-section {
-    flex-direction: column;
-    margin-left: 0;
-    text-align: center;
+    padding: 30px 15px;
   }
 
   .llm-heading {
-    font-size: 6vw;
+    font-size: 7vw;
     text-align: center;
   }
 
   .llm-intro {
-    text-align: center;
     font-size: 1rem;
-  }
-
-  .llm-feature-list {
-    font-size: 0.95rem;
-    text-align: left;
+    text-align: center;
   }
 
   .feature-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
-  .rectangle-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .rectangle-with-text {
-    flex: 1 1 100%;
-    max-width: 90%;
-  }
-
-  .text-overlay,
-  .text-overlay.right-text-overlay {
-    left: 10%;
-    top: 12%;
-    font-size: 1rem;
-  }
-
-  .llm-text,
-  .right-rectangle-text-main {
-    font-size: 1.2rem;
-  }
-
-  .learn-more-text,
-  .right-explore-now {
-    font-size: 0.9rem;
+  .category-heading {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
   .llm-heading {
-    font-size: 7vw;
+    font-size: 8vw;
   }
 
   .llm-intro {
     font-size: 0.9rem;
   }
 
-  .llm-feature-list {
-    font-size: 0.85rem;
-    gap: 1rem;
-  }
-
   .feature-title {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 
-  .llm-image {
-    width: 100%;
-  }
-
-  .rectangle-img {
-    width: 100%;
-  }
-
-  .text-overlay,
-  .text-overlay.right-text-overlay {
-    left: 15%;
-    top: 12%;
-    font-size: 0.85rem;
-  }
-
-  .llm-text,
-  .right-rectangle-text-main {
-    font-size: 0.95rem;
-  }
-
-  .llm-rectangle-wrapper {
-    padding: 0.8rem;
+  .category-heading {
+    font-size: 1.5rem;
   }
 }
