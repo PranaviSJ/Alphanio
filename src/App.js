@@ -8,7 +8,6 @@ import FeatureSection from './components/FeatureSection';
 import CallCentreSection from './components/CallCentreSection';
 import { LlmAndRectangleWrapper } from "./components/LlmAndRectangle";
 import AgentAi from './components/AgentAi';
-import Testimonial from './components/Testimonial';
 import Partner from './components/Partner'; 
 import Footer from './components/Footer';
 
@@ -29,7 +28,6 @@ function App() {
             <CallCentreSection />
             <LlmAndRectangleWrapper />
             <AgentAi />
-            <Testimonial />
             <Partner /> 
             <Footer />
 
