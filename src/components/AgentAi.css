@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
-/* Extra bold weight */
 
 .agent-ai-wrapper {
   min-height: 100vh;
@@ -12,7 +11,7 @@
   flex-direction: column;
 }
 
-/* Row layout on desktop */
+
 .agent-ai-content {
    margin-top: -1vh;
    margin-left: 5vh;
@@ -20,10 +19,9 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* allow wrapping */
 }
 
-/* Text group */
+
 .agent-ai-text-group {
   flex: 1;
   max-width: 600px;
@@ -83,12 +81,6 @@
   margin-right: 10%;
 }
 
-
-/* ===== HERO SECTION: Prevent Text-Image Overlap ===== */
-
-/* === Responsive fixes only (desktop unchanged) === */
-
-/* 1300px and down: stack content, image on right, text justified */
 @media (max-width: 1300px) {
   .agent-ai-content {
     flex-direction: column-reverse !important;
@@ -116,14 +108,14 @@
   }
 
   .agent-ai-description {
-    text-align: justify !important;      /* ✅ makes each line filled */
+    text-align: justify !important;      
     margin-left: 0 !important;
     max-width: 36rem !important;
     margin-inline: auto !important;
     overflow: visible !important;
     display: block !important;
-    hyphens: auto !important;            /* ✅ cleaner breaks */
-    word-break: break-word !important;   /* ✅ ensures text fits */
+    hyphens: auto !important;            
+    word-break: break-word !important;  
   }
 
   .agent-ai-buttons {
@@ -135,50 +127,50 @@
     width: 100% !important;
     height: auto !important;
     display: flex !important;
-    justify-content: flex-end !important;   /* ✅ move image to right */
+    justify-content: flex-end !important;   
     margin: 2vh auto !important;
-    padding-right: 5%;                      /* ✅ small spacing from edge */
+    padding-right: 5%;                     
   }
 
   .agent-ai-image {
     width: min(70vw, 400px) !important;
     height: auto !important;
-    margin-right: 20% !important;          /* ✅ image hugs right */
+    margin-right: 20% !important;         
     display: block !important;
     position: static !important;
   }
 }
 
-/* Mobile responsive fix */
+
 @media (max-width: 768px) {
   .image-container {
     display: flex;
-    justify-content: flex-end;  /* push images to right side */
+    justify-content: flex-end;  
     margin: 0;
     width: 100%;
   }
 
   .text-block {
     width: 100%;
-    padding: 0 16px;            /* nice breathing room */
-    text-align: left;           /* keep aligned left */
+    padding: 0 16px;          
+    text-align: left;         
     line-height: 1.6;
     word-break: break-word;
-    white-space: normal;        /* ensures text fills the line naturally */
+    white-space: normal;        
   }
 
   .text-block p {
-    text-align: justify;        /* makes lines fill width evenly */
+    text-align: justify;        
   }
 
 }
 
 
-/* Small phones: keep image responsive on right */
+
 @media (max-width: 480px) {
   .agent-ai-image {
     width: 70vw !important;
     max-width: 70vw !important;
-    margin: 0 0 0 0 !important;          /* ✅ still right aligned */
+    margin: 0 0 0 0 !important;         
   }
 }
