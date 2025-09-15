@@ -1,6 +1,6 @@
 import React from "react";
 import "./AgentAi.css";
-import agentImage from "../assets/Agent.png"; // adjust path as needed
+import agentImage from "../assets/Agent.png"; 
 
 const AgentAi = () => {
   return (

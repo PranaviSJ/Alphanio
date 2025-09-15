@@ -6,7 +6,6 @@ import L from "leaflet";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-// Fix Leaflet marker issue
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
@@ -23,7 +22,7 @@ function Contact() {
 
   useEffect(() => {
     if (mapRef.current) {
-      mapRef.current.invalidateSize(); // forces map to render correctly
+      mapRef.current.invalidateSize(); 
     }
   }, []);
 
@@ -31,11 +30,8 @@ function Contact() {
     <>
       <Navbar />
 
-      {/* Cover Image */}
       <div className="contact-cover">Get in Touch</div>
-
       <div className="contact-container">
-        {/* Left: Company Info */}
         <div className="contact-info">
           <h2>Contact Us</h2>
           <p>📍 Alphanio Nexgen, No.39, 2nd Floor,</p>
@@ -45,7 +41,6 @@ function Contact() {
           <p>⏰ Mon – Fri, 9:00 AM – 6:00 PM</p>
         </div>
 
-        {/* Right: Map */}
         <div className="contact-map">
           <MapContainer
             center={[12.978081621734207, 77.63984948465591]}

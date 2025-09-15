@@ -1,4 +1,3 @@
-/* container near bottom-right */
 .assistant-bot {
   position: fixed;
   bottom: 16px;
@@ -7,9 +6,8 @@
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-/* floating round icon */
 .bot-icon {
-  background: linear-gradient(135deg, #64748b, #475569); /* slate gradient */
+  background: linear-gradient(135deg, #64748b, #475569); 
   color: #ffffff;
   font-size: 22px;
   border-radius: 50%;
@@ -21,28 +19,24 @@
   justify-content: center;
   cursor: pointer;
 
-  /* default halo for light bg */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25),
               0 0 6px rgba(0, 0, 0, 0.15);
 
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-/* adapts halo when bg is dark (use parent class/section selector) */
 .dark-bg .bot-icon {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25),
-              0 0 8px rgba(255, 255, 255, 0.4); /* lighter glow */
+              0 0 8px rgba(255, 255, 255, 0.4); 
 }
 
 .bot-icon:hover {
   transform: scale(1.1);
 }
 
-
-/* popup window */
 .bot-popup {
   position: fixed;
-  bottom: 88px;                 /* sits above the floating icon */
+  bottom: 88px;              
   right: 16px;
   width: 400px;
   max-width: calc(100% - 32px);
@@ -55,22 +49,18 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
-  /* hidden by default */
   opacity: 0;
   transform: translateY(12px) scale(0.995);
   pointer-events: none;
   transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
-/* open state */
 .bot-popup.open {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 
-/* close button at top-right inside popup */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -83,15 +73,13 @@
   z-index: 3;
 }
 
-/* wrapper so df-messenger can flex-fill area */
 .df-wrapper {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 0; /* important for proper flex behavior on mobile */
+  min-height: 0; 
 }
 
-/* style the df-messenger element to fill container */
 df-messenger {
   flex: 1;
   width: 100%;
@@ -105,7 +93,6 @@ df-messenger {
   --df-messenger-user-message-border-radius: 12px;
 }
 
-/* Small screens (mobile) */
 @media (max-width: 600px) {
   .assistant-bot {
     bottom: 12px;
@@ -130,7 +117,6 @@ df-messenger {
     border-radius: 12px;
   }
 
-  /* put close button slightly inset on mobile */
   .close-btn {
     top: 8px;
     right: 12px;
@@ -138,7 +124,6 @@ df-messenger {
   }
 }
 
-/* Smaller phones */
 @media (max-width: 380px) {
   .bot-popup {
     height: calc(100vh - 16px);

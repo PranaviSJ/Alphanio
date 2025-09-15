@@ -1,15 +1,14 @@
 .home-content-container {
   display: flex;
-  flex-wrap: nowrap;       /* keep hero and feature side-by-side on wide screens */
+  flex-wrap: nowrap;       
   justify-content: space-between;
-  align-items: flex-start; /* align top edges */
-  gap: 3vw;                /* space between hero and feature */
+  align-items: flex-start; 
+  gap: 3vw;                
   width: 100%;
   box-sizing: border-box;
   padding: 2vh 3vw;
 }
 
-/* Responsive for tablets and smaller: stack vertically */
 @media (max-width: 1024px) {
   .home-content-container {
     flex-direction: column;
@@ -18,7 +17,6 @@
   }
 }
 
-/* Mobile: add some padding */
 @media (max-width: 480px) {
   .home-content-container {
     padding: 2vh 2vw;

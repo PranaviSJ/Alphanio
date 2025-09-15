@@ -4,7 +4,7 @@
 }
 
 .App-logo {
-  height: 40vmin; /* Already responsive */
+  height: 40vmin; 
   pointer-events: none;
 }
 
@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.85vh; /* ~20px = (20/1080)*100 */
+  font-size: 1.85vh; 
   color: white;
 }
 

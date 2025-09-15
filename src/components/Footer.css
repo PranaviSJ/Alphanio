@@ -11,7 +11,6 @@
   text-align: left;
 }
 
-/* Left section (logo) */
 .footer-left {
   flex: 1 1 220px;
   min-width: 200px;
@@ -23,17 +22,15 @@
   margin-bottom: 1rem;
 }
 
-/* ✅ Links container */
 .footer-links {
   flex: 2 1 500px;
   display: flex;
   justify-content: flex-start;
   gap: 3rem;
-  /* Equal spacing between Quick Links / Products / Company */
   flex-wrap: wrap;
 }
 
-/* Each column */
+
 .footer-quicklinks {
   min-width: 150px;
 }
@@ -65,7 +62,7 @@
   color: #007bff;
 }
 
-/* Rights */
+
 .footer-rights {
   width: 100%;
   text-align: right;
@@ -77,7 +74,6 @@
   color: #00B767;
 }
 
-/* ✅ Tablet adjustments */
 @media (max-width: 1024px) {
   .footer-links {
     gap: 2rem;
@@ -88,7 +84,6 @@
   }
 }
 
-/* ✅ Mobile adjustments */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;

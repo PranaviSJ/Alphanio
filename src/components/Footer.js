@@ -4,19 +4,16 @@ import logo from "../assets/logo.png";
 import { HashLink } from "react-router-hash-link";
 import { features } from "./LlmAndRectangle";
 
-const OFFSET = 120; // pixels from top
+const OFFSET = 120; 
 
 const Footer = () => {
   return (
     <footer id="contact" className="footer">
-      {/* Logo */}
       <div className="footer-left">
         <img src={logo} alt="Company Logo" className="footer-logo" />
       </div>
 
-      {/* Links */}
       <div className="footer-links">
-        {/* Quick links */}
         <div className="footer-quicklinks">
           <h3 className="quicklinks-title">Quick links</h3>
           <ul className="quicklinks-list">
@@ -53,7 +50,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Products dynamically scroll to feature heading with offset */}
         <div className="footer-quicklinks">
           <h3 className="quicklinks-title">Products</h3>
           <ul className="quicklinks-list">
@@ -72,7 +68,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Company */}
         <div className="footer-quicklinks">
           <h3 className="quicklinks-title">Company</h3>
           <ul className="quicklinks-list">
@@ -100,7 +95,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Rights */}
       <div className="footer-rights">
         <span className="rights-symbol">©</span>
         <span className="rights-text">

@@ -6,7 +6,6 @@ const AssistantBot = () => {
 
   return (
     <div className="assistant-bot">
-      {/* Floating Bot Icon */}
       {!isOpen && (
         <button
           className="bot-icon"
@@ -16,7 +15,6 @@ const AssistantBot = () => {
         </button>
       )}
 
-      {/* Popup with animation */}
       <div className={`bot-popup ${isOpen ? "open" : ""}`}>
         {isOpen && (
           <>
@@ -28,7 +26,6 @@ const AssistantBot = () => {
               ✖
             </button>
 
-            {/* Dialogflow Messenger */}
             <link
               rel="stylesheet"
               href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"

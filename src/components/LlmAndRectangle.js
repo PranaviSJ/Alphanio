@@ -1,7 +1,5 @@
 import React from "react";
 import "./LlmAndRectangle.css";
-
-// ✅ Import images
 import agent from "../assets/AgentAi.png";
 import faq from "../assets/FAQ.png";
 import healthcare from "../assets/healthcare.png";
@@ -11,7 +9,6 @@ import scheduler from "../assets/Scheduler.png";
 import redirector from "../assets/Redirector.png";
 import outbound from "../assets/Outbound.png";
 
-// ✅ Export features array for footer usage
 export const features = [
   { 
     title: "Alpha-Flashbook", 
@@ -55,7 +52,6 @@ export const features = [
   },
 ];
 
-// ✅ LLM Section with zig-zag layout
 export const LlmSection = () => {
   return (
     <section className="llm-section">
@@ -68,7 +64,7 @@ export const LlmSection = () => {
           <div
             key={index}
             className={`llm-feature zigzag ${index % 2 === 0 ? "normal" : "reverse"}`}
-            id={feature.title.replace(/\s+/g, "-")} // ✅ unique ID for smooth scroll
+            id={feature.title.replace(/\s+/g, "-")} 
           >
             <img src={feature.img} alt={feature.title} className="feature-image" />
             <div className="feature-text">
@@ -82,7 +78,6 @@ export const LlmSection = () => {
   );
 };
 
-// ✅ Wrapper with #products ID
 export const LlmAndRectangleWrapper = () => (
   <div id="products" className="llm-rectangle-wrapper">
     <LlmSection />
