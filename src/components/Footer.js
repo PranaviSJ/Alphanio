@@ -47,6 +47,15 @@ const Footer = () => {
                 Products
               </HashLink>
             </li>
+            <li>
+              <HashLink
+                smooth
+                to="/contact"
+                className="quicklink-item"
+              >
+                Contact Us
+              </HashLink>
+            </li>
           </ul>
         </div>
 
